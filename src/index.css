@@ -1,0 +1,10 @@
+@import "tailwindcss";
+/* index.css */
+
+.clip-half-circle {
+  clip-path: ellipse(50% 100% at 50% 0%);
+  display: block;
+}
+.clip-polygon {
+  clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 20% 100%, 0% 50%);
+}
