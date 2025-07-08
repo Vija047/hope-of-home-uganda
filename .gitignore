@@ -23,4 +23,6 @@ dist-ssr
 *.sln
 *.sw?
 
-src/assets/images/Home_of_Hope_Doc3.mp4
+# Large media files
+src/assets/images/videos/Home_of_Hope_Doc3.mp4
+*.mp4
