@@ -34,11 +34,11 @@ export default function NavbarFunctional() {
     };
 
     return (
-        <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-lg">
+        <header className="fixed top-0 left-0 w-full z-50 bg-#FFFFFF shadow-lg ">
             <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
                 {/* Logo */}
                 <Link to="/" className="text-[#1B3F92] text-2xl font-bold  hover:text-blue-900 transition-colors">
-                    <span className="text-orange-500">Home</span> of Hope
+                    Home of Hope
                 </Link>
 
                 {/* Mobile Menu Button */}
@@ -168,7 +168,7 @@ export default function NavbarFunctional() {
                     <Link to="/services" className="px-4 py-2 border border-[#1B3F92] text-[#1B3F92] hover:bg-[#1B3F92] hover:text-white uppercase transition-colors rounded">
                         Services
                     </Link>
-                    <Link to="/donation" className="px-4 py-2 bg-orange-500 text-white hover:bg-orange-600 uppercase transition-colors rounded">
+                    <Link to="/donation" className="px-4 py-2  bg-[#1B3F92] text-white hover:bg-blue-900  uppercase transition-colors rounded">
                         Donate
                     </Link>
                     <Link to="/contact" className="px-4 py-2 bg-[#1B3F92] text-white hover:bg-blue-900 uppercase transition-colors rounded">
