@@ -1,11 +1,29 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import childImage from "../../assets/images/chidimages.jpg";
-import homeOfHopeVideo from "../../assets/images/Home_of_Hope_Doc3.mp4";
+import homeOfHopeVideo from "../../assets/images/videos/Home_of_Hope_Doc3.mp4";
 import ourvisionImage from "../../assets/images/OUR-VISION.jpg";
 import ourmissionImage from "../../assets/images/OUR-MISSION.jpg";
 import ourneedforsupportimage from "../../assets/images/OUR-NEED -FOR -SUPPORT.jpg";
-
+import video02 from "../../assets/images/videos/viode-01.mp4"
+import imageofvideo01 from "../../assets/images/videos/image-of-video01.jpg"
+import facebookicon from "../../assets/images/videos/image-of-facebook-icon.jpg";
+import facebookimage from "../../assets/images/videos/image-of-facebook.jpg"
+import dontion01 from "../../assets/images/donation-image02.gif";
+import homeministrie from "../../assets/images/donation-image02.gif";
+import homeofinternational from "../../assets/images/home-ofhope-interntinal.gif";
+import timothyimg from "../../assets/images/kids/timothy-imag.png";
+import video03 from "../../assets/images/videos/video-02.mp4";
+import Edithsimg from "../../assets/images/aboutus/Edith'simg.jpg";
+import Edithsimg2 from "../../assets/images/aboutus/Edith'simg2.jpg";
+import staf01 from "../../assets/images/aboutus/staff01jpg.jpg";
+import staf02 from "../../assets/images/aboutus/staff02.jpg"
+import staf03 from "../../assets/images/aboutus/staff03.jpg";
+import staf04 from "../../assets/images/aboutus/staff004.jpg";
+import staf05 from "../../assets/images/aboutus/staff05.jpg";
+import staf06 from "../../assets/images/aboutus/staff06.jpg";
+import ourmissionImage1 from "../../assets/images/aboutus/ourmission01.jpg";
+import video04 from "../../assets/images/videos/video03.mp4";
 // Cards for mission, vision, support
 const cards = [
     {
@@ -80,7 +98,7 @@ export default function Home() {
                     onClick={() => navigate("/donation")}
                     className="inline-block bg-[#1B3F92] text-white font-bold px-8 py-4 rounded-full hover:bg-[#16316E] transition"
                 >
-                    Donate Now
+                    Donate
                 </button>
             </div>
 
@@ -93,13 +111,13 @@ export default function Home() {
             </div>
 
             {/* VIDEO + TEXT */}
-            <div className="bg-[#E6F7F8] flex flex-col md:flex-row items-center justify-center p-10 gap-10">
+            <div className="bg-[#FFFCF0] flex flex-col md:flex-row items-center justify-center p-10 gap-10">
                 <div className="w-full md:w-2/3">
                     <video
                         src={homeOfHopeVideo}
                         controls
                         className="w-full max-w-3xl mx-auto rounded-lg shadow-xl"
-                        poster={childImage}
+
                     >
                         Sorry, your browser doesn't support embedded videos.
                     </video>
@@ -135,7 +153,415 @@ export default function Home() {
                     </section>
                 ))}
             </div>
-            
+            {/* video 02  */}
+            <div className="bg-[#FFFCF0] py-10 px-4">
+                <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-10">
+
+                    {/* Left: Video */}
+                    <div className="w-full md:w-1/2">
+                        <video
+                            src={video02} // Replace with actual video file or path
+                            controls
+                            className="w-full rounded-lg shadow-xl"
+                        >
+                            Sorry, your browser doesn't support embedded videos.
+                        </video>
+                        {/* Facebook Section */}
+                        <div
+                            className="relative bg-cover bg-center py-12 flex justify-center items-center"
+                        >
+                            <div className="relative bg-[#FFFCF0] bg-opacity-95 shadow-2xl rounded-2xl p-8 max-w-2xl w-full  flex flex-col md:flex-row items-center gap-8 overflow-hidden" style={{
+                                backgroundImage: `url(${facebookimage})`,
+                                backgroundSize: 'cover',
+                                backgroundPosition: 'center',
+                                minHeight: '320px',
+                            }}>
+                                {/* Overlay for better readability */}
+                                <div className="absolute inset-0 bg-[#FFFCF0] bg-opacity-80 pointer-events-none rounded-2xl" />
+                                {/* Facebook Profile Image */}
+                                <img
+                                    src={facebookicon}
+                                    alt="Facebook Page"
+                                    className="w-28 h-28 rounded-full border-4 border-[#1877F2] object-cover shadow-md mb-4 md:mb-0 relative z-10"
+                                />
+                                {/* Page Info */}
+                                <div className="flex-1 text-center md:text-left relative z-10">
+                                    <h3 className="text-2xl md:text-3xl font-extrabold text-[#1B3F92] mb-1">HOME of HOPE jinja, Uganda</h3>
+                                    <p className="text-gray-600 text-base md:text-lg mb-2">1.9K likes • 2.1K followers</p>
+                                    <div className="flex flex-col md:flex-row gap-3 mt-4 justify-center md:justify-start">
+                                        <a
+                                            href="https://www.facebook.com/homeofhopejinja/?ref=embed_page#"
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="bg-[#1877F2] hover:bg-[#145DBF] text-white px-6 py-2 rounded-full text-base font-semibold shadow transition"
+                                        >
+                                            Message
+                                        </a>
+                                        <a
+                                            href="https://api.whatsapp.com/send?phone=%2B256704763155&context=..."
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                            className="bg-green-500 hover:bg-green-600 text-white px-6 py-2 rounded-full text-base font-semibold shadow transition"
+                                        >
+                                            WhatsApp
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Right: Profile Content */}
+                    <div className="w-full md:w-1/2">
+                        <div className="bg-[#FFFCF0] rounded-lg shadow-md p-6 flex flex-col md:flex-row gap-6">
+
+                            {/* Image and Caption */}
+                            <div className="flex flex-col items-center md:items-start">
+                                <img
+                                    src={imageofvideo01} // Replace with correct image path
+                                    alt="Edith Lukabwe"
+                                    className="w-48 h-64 object-cover rounded-md border"
+                                />
+                                <p className="text-sm text-[royalblue] mt-2 font-medium text-center md:text-left">
+                                    Edith Lukabwe, Director<br />Home of Hope
+                                </p>
+                            </div>
+
+                            {/* Text Content */}
+                            <div className="flex-1 text-[royalblue] space-y-4">
+                                <h2 className="text-lg font-semibold">
+                                    Meet Edith Lukabwe, Director Home of Hope
+                                </h2>
+                                <p>
+                                    Edith Lukabwe founded Home of Hope to provide physical care and compassion
+                                    for children in Uganda living with multiple disabilities. Many of the children
+                                    living at Home of Hope were abandoned and neglected, and Home of Hope offered
+                                    a place for them to go. There are currently 96 children at Home of Hope today.
+                                </p>
+                                <p>
+                                    The organization does community work and helps educate parents of disabled
+                                    children on how to best care for them. They offer medications, home visits and
+                                    outreach, and aim to reduce the number of children being abandoned. The
+                                    organization works to provide the children with basic needs, social protection
+                                    and inclusion, and improved standards of living. They also continue to raise
+                                    awareness and encourage love for these children in the community.
+                                </p>
+                                <button className="bg-cyan-200 hover:bg-cyan-300 text-[royalblue] font-medium px-4 py-2 rounded transition duration-200">
+                                    Read Edith’s Story (in her own words)
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* SUPPORTERS & IMPACT SECTION */}
+            <section className="bg-[#FFFCF0] py-20 px-4">
+                <div className="max-w-6xl mx-auto">
+
+                    {/* Partners Header */}
+                    <div className="text-center mb-16">
+                        <h2 className="text-4xl font-bold text-[#1B3F92] mb-4">Our Trusted Partners</h2>
+                        <p className="text-gray-600 max-w-2xl mx-auto">
+                            Working together with incredible organizations to bring hope and healing to children in Uganda
+                        </p>
+
+                        {/* Partner Logos */}
+                        <div className="flex flex-wrap justify-center items-center gap-12 mt-10 py-8 px-6 rounded-2xl shadow-lg">
+                            <img src={dontion01} alt="Our Hope International" className="h-20 hover:scale-105 transition-transform" />
+                            <img src={homeministrie} alt="Home of Hope Logo" className="h-20 hover:scale-105 transition-transform" />
+                            <img src={homeofinternational} alt="Hope Builders International" className="h-20 hover:scale-105 transition-transform" />
+                        </div>
+                    </div>
+
+                    {/* Impact Story */}
+                    <div className="grid md:grid-cols-2 gap-12 items-center mb-16">
+                        <div className="space-y-6">
+                            <h3 className="text-3xl font-bold text-[#1B3F92]">Every Child Deserves a Future</h3>
+                            <p className="text-gray-700 leading-relaxed">
+                                Without the continued support of our valued partners and supporters, Home of Hope could not
+                                provide the essential services needed to help disabled and abandoned children in Uganda thrive.
+                            </p>
+                            <div className="bg-[#1B3F92] text-white p-6 rounded-xl">
+                                <p className="italic">
+                                    "Thank you for believing in our mission. Together, we are creating brighter tomorrows
+                                    for children who need it most."
+                                </p>
+                                <p className="mt-3 font-semibold">— Edith Lukabwe, Director</p>
+                            </div>
+                        </div>
+
+                        {/* Featured Child Story */}
+                        <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+                            <div className="relative">
+                                <img
+                                    src={timothyimg}
+                                    alt="Timothy and caregiver"
+                                    className="w-full h-64 object-cover"
+                                />
+                                <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent"></div>
+                                <div className="absolute bottom-4 left-4 text-white">
+                                    <h4 className="text-xl font-bold">Meet Timothy</h4>
+                                    <p className="text-sm opacity-90">Age 8, Dreams of becoming a teacher</p>
+                                </div>
+                            </div>
+                            <div className="p-6">
+                                <h4 className="text-lg font-semibold text-[#1B3F92] mb-3">Lighting the Way to Timothy's Future</h4>
+                                <p className="text-gray-600 text-sm mb-4">
+                                    Timothy arrived at Home of Hope as an abandoned child with special needs.
+                                    Today, he's thriving in our care and educational programs.
+                                </p>
+                                <button className="bg-[#1B3F92] text-white px-4 py-2 rounded-full text-sm font-semibold hover:bg-[#16316E] transition">
+                                    Read His Story
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Call to Action */}
+                    <div className="text-center">
+                        <h3 className="text-2xl font-bold text-[#1B3F92] mb-6">
+                            Your Donation Can Change Everything
+                        </h3>
+                        <p className="text-gray-700 mb-8 max-w-3xl mx-auto">
+                            Join our community of supporters and help us provide medical care, education, and love
+                            to children with disabilities in Uganda. Every contribution makes a real difference.
+                        </p>
+
+                        {/* Donation Options */}
+                        <div className="flex flex-col sm:flex-row justify-center gap-6">
+                            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                                <img src={homeofinternational} alt="Our Hope International" className="h-12 mx-auto mb-3" />
+                                <h4 className="font-semibold text-[#1B3F92] mb-2">Donate through Our Hope International</h4>
+                                <button
+                                    onClick={() => navigate("/donation")}
+                                    className="bg-[#1B3F92] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#16316E] transition w-full"
+                                >
+                                    Donate Now
+                                </button>
+                            </div>
+
+                            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                                <img src={homeministrie} alt="Home of Hope" className="h-12 mx-auto mb-3" />
+                                <h4 className="font-semibold text-[#1B3F92] mb-2">Donate through Home of Hope Ministries</h4>
+                                <button
+                                    onClick={() => navigate("/donation")}
+                                    className="bg-[#1B3F92] text-white px-6 py-3 rounded-full font-semibold hover:bg-[#16316E] transition w-full"
+                                >
+                                    Donate Now
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            {/* video 03 */}
+            <div className="bg-[#FFFCF0] py-10 px-4">
+                <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-10">
+
+                    {/* Left: Video */}
+                    <div className="w-full md:w-1/2">
+                        <video
+                            src={video03} // Replace with actual video file or path
+                            controls
+                            className="w-full rounded-lg shadow-xl"
+                        >
+                            Sorry, your browser doesn't support embedded videos.
+                        </video>
+                    </div>
+
+                    {/* Right: Hex Text Box */}
+                    <div className="w-full md:w-1/2 flex justify-center items-center">
+                        <div
+                            className="text-[royalblue] font-medium text-center px-6 py-8 text-lg leading-relaxed"
+
+                        >
+                            <p>
+                                The kids were so excited for our annual “Picture Day”.
+                            </p>
+                            <p className="mt-4">
+                                The girls picked out their prettiest dresses to wear and the boys their most colourful shirts and shorts.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* about us */}
+            <div>
+                {/* Edith Lukabwe */}
+ <section className="w-full py-16 px-4 md:px-16 bg-[#e0f7fa]">
+  <div className="max-w-7xl mx-auto">
+    <h2 className="text-4xl font-bold text-sky-700 mb-6">
+      Edith's Story (in her own words)
+    </h2>
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <div>
+        <img
+          src={Edithsimg}
+          alt="Edith and Derrick"
+          className="w-full h-auto rounded-xl shadow-md mb-4"
+        />
+        <p className="text-sm text-gray-600 mb-4">
+          Edith with her son Derrick
+        </p>
+        <p className="text-justify mb-3">
+          In 2000, God blessed me with my son Derrick. Shortly after birth, he
+          faced severe health challenges and was diagnosed with multiple
+          disabilities. Despite hardships, my family stayed strong, seeking
+          care and support for him.
+        </p>
+        <p className="text-justify mb-3">
+          In 2004, I joined a local charity to help other families with disabled
+          children. I soon realized many children were abandoned due to
+          disabilities and started caring for them in my own community.
+        </p>
+      </div>
+      <div>
+        <img
+          src={Edithsimg2}
+          alt="Edith Story"
+          className="w-full h-auto rounded-xl shadow-md mb-4"
+        />
+          <p className="text-sm text-gray-600 mb-4">
+          Edith Lukabwe at International Volunteer Day
+        </p>
+        <p className="text-justify mb-3">
+          After an accident in 2006, I felt called by God to fully dedicate my
+          life to these children. With support from friends, I founded Home of
+          Hope in 2007 with just six children.
+        </p>
+        <p className="text-justify mb-3">
+          Today, I care for nearly 100 abandoned children with disabilities,
+          providing love, therapy, and hope for their future.
+        </p>
+        <p className="text-justify font-semibold">~ Edith Lukabwe</p>
+      </div>
+    </div>
+  </div>
+</section>
+{/* Meet Our Staff */}
+            <section className="w-full py-16 px-4 md:px-16 bg-white">
+                <div className="max-w-7xl mx-auto">
+                    <h2 className="text-4xl font-bold text-sky-700 mb-6">Meet Our Staff</h2>
+                    <p className="mb-3">
+                        Our dedicated and compassionate staff give so much of themselves to
+                        provide loving care for the more than one hundred children at Home
+                        of Hope. Many of the children have severe disabilities and are
+                        extremely fragile requiring constant companionship, vigilance and
+                        special care.
+                    </p>
+                    <p className="mb-3">
+                        Paid through your donations, our wonderful staff members have been
+                        known to give their own money to help purchase medicines, equipment
+                        and clothing for the children, a testament to the wonderful people
+                        they are.
+                    </p>
+                    <p>
+                        To our incredible staff, God bless you and we could not do it
+                        without you!
+                    </p>
+                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                        <img
+                            src={staf01}
+                            alt="Staff 1"
+                            className="w-full h-auto object-cover rounded-xl shadow-md"
+                        />
+                        <img
+                            src={staf02}
+                            alt="Staff 2"
+                            className="w-full h-auto object-cover rounded-xl shadow-md"
+                        />
+                        <img
+                            src={staf03}
+                            alt="Staff 3"
+                            className="w-full h-auto object-cover rounded-xl shadow-md"
+                        />
+                         <img
+                            src={staf04}
+                            alt="Staff 3"
+                            className="w-full h-auto object-cover rounded-xl shadow-md"
+                        />
+                         <img
+                            src={staf05}
+                            alt="Staff 3"
+                            className="w-full h-auto object-cover rounded-xl shadow-md"
+                        />
+                         <img
+                            src={staf06}
+                            alt="Staff 3"
+                            className="w-full h-auto object-cover rounded-xl shadow-md"
+                        />
+                    </div>
+                </div>
+            </section>
+            {/* Our Mission */}
+            <section className="w-full py-16 px-4 md:px-16 bg-white">
+                <div className="max-w-7xl mx-auto">
+                    <h2 className="text-4xl font-bold text-sky-700 mb-6">Our Mission</h2>
+                    <p className="mb-4">
+                        Home of Hope is a registered community based organization in the
+                        Jinja district in Uganda. The organization has a home specifically
+                        for children with disabilities...
+                    </p>
+                    <ul className="list-disc pl-6 mb-6 space-y-2">
+                        <li>Center based therapy and care</li>
+                        <li>Assessment Clinics/outreach clinics</li>
+                        <li>Home Visits</li>
+                        <li>Epilepsy Medication</li>
+                        <li>Adaptive Aids</li>
+                        <li>Drop in clinics</li>
+                        <li>Support for Corrective Surgery</li>
+                        <li>Nutrition support</li>
+                        <li>Income generating activities</li>
+                        <li>Training workshops</li>
+                        <li>Child School Sponsorship</li>
+                    </ul>
+                    <img
+                        src={ourmissionImage1}
+                        alt="Mission"
+                        className="w-full h-auto rounded-xl shadow-md"
+                    />
+                </div>
+            </section>
+
+            {/* Our Vision */}
+            <section className="w-full py-16 px-4 md:px-16 bg-[#e0f7fa] text-center">
+                <h2 className="text-4xl font-bold text-sky-700 mb-6">Our Vision</h2>
+                <p className="italic mb-6 max-w-3xl mx-auto">
+                    “At Home of Hope, we are striving for socially accepted, included,
+                    well cared for, and involved community of children with multiple
+                    disabilities with self-help skills to live an independent life.”
+                    <br />~ Edith Lukabwe
+                </p>
+                <div className="flex justify-center">
+                    <video
+                        controls
+                        className="w-full md:w-2/3 rounded-xl shadow-md"
+                        src={video04}
+                    />
+                </div>
+            </section>
+            </div>
+       
+           
+
+            {/* Our Need for Support */}
+            <section className="w-full py-16 px-4 md:px-16 bg-white text-center">
+                <h2 className="text-4xl font-bold text-sky-700 mb-4">
+                    Our Need for Support
+                </h2>
+                <h3 className="text-2xl text-pink-600 mb-8 font-bold">
+                    We are very much in need of your help...
+                </h3>
+                <div className="flex justify-center">
+                    <img
+                        src={homeOfHopeVideo}
+                        alt="Need for Support"
+                        className="w-full md:w-2/3 rounded-xl shadow-md"
+                    />
+                </div>
+            </section>
 
             {/* CURRENT PROJECTS SECTION */}
             <section className="bg-[#FFFCF0] text-white py-16 px-4">
