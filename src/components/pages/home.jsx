@@ -1,14 +1,22 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import childImage from "../../assets/images/chidimages.jpg";
+import childImageLarge from "../../assets/images/chilsdspict_large.jpg";
+import childImageMain from "../../assets/images/childimage.jpg";
+import peopleUgandaGroup from "../../assets/images/people-uganda-group-local-kids.webp";
+import ugandaEducation from "../../assets/images/Uganda-Educatio .jpg";
+import ugandaOrphanage from "../../assets/images/Uganda-Orphanage-Home-Foundation-jpg.jpg";
+import ugandaProvidence from "../../assets/images/uganda-providence-pg.jpg";
+import ugandaCountry from "../../assets/images/Uganda.webp";
+import empowermentProjects from "../../assets/images/EMPOWERMENT-PROJECTS.jpg";
 import ourvisionImage from "../../assets/images/OUR-VISION.jpg";
 import ourmissionImage from "../../assets/images/OUR-MISSION.jpg";
 import ourneedforsupportimage from "../../assets/images/OUR-NEED -FOR -SUPPORT.jpg";
 import imageofvideo01 from "../../assets/images/videos/image-of-video01.jpg"
 import facebookicon from "../../assets/images/videos/image-of-facebook-icon.jpg";
 import facebookimage from "../../assets/images/videos/image-of-facebook.jpg"
-import dontion01 from "../../assets/images/donation-image02.gif";
-import homeministrie from "../../assets/images/donation-image02.gif";
+import donationImage from "../../assets/images/dontion-images01.png";
+import homeministrie from "../../assets/images/home-ofhope-minstrimage.gif";
 import homeofinternational from "../../assets/images/home-ofhope-interntinal.gif";
 import timothyimg from "../../assets/images/kids/timothy-imag.png";
 import Edithsimg from "../../assets/images/aboutus/Edith'simg.jpg";
@@ -104,6 +112,16 @@ export default function Home() {
 
             {/* HERO - Modern gradient background with floating elements */}
             <div className="relative min-h-screen flex items-center justify-center">
+                {/* Background hero image */}
+                <div className="absolute inset-0 z-0">
+                    <img
+                        src={peopleUgandaGroup}
+                        alt="Children in Uganda"
+                        className="w-full h-full object-cover opacity-20"
+                    />
+                    <div className="absolute inset-0 bg-gradient-to-br from-white/90 to-blue-50/80"></div>
+                </div>
+
                 {/* Animated background elements */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
                     <div className="absolute top-20 left-10 w-32 h-32 bg-blue-200/20 rounded-full blur-xl animate-pulse"></div>
@@ -112,11 +130,11 @@ export default function Home() {
                 </div>
 
                 <div className="max-w-6xl mx-auto px-4 pt-20 pb-12 relative z-10">
-                   
 
-                    <h1 className="text-6xl md:text-7xl lg:text-8xl font-black  bg-clip-text bg-gradient-to-r text-[#1B3F92] mb-8 leading-tight animate-slide-up">
+
+                    <h1 className="text-4xl md:text-7xl lg:text-4xl font-black  bg-clip-text bg-gradient-to-r text-[#1B3F92] mb-8 leading-tight animate-slide-up">
                         Give Hope.<br />
-                        <span className="text-5xl md:text-6xl lg:text-7xl">Change Lives.</span>
+                        <span className="text-4xl md:text-6xl lg:text-4xl">Change Lives.</span>
                     </h1>
 
                     <p className="text-gray-700 mb-12 text-xl md:text-2xl max-w-3xl mx-auto leading-relaxed animate-slide-up delay-300">
@@ -130,7 +148,7 @@ export default function Home() {
                             className="group bg-gradient-to-r from-[#1B3F92] to-blue-600 text-white font-bold px-10 py-5 rounded-full hover:from-[#16316E] hover:to-blue-700 transition-all duration-300 transform hover:scale-105 hover:shadow-2xl shadow-lg"
                         >
                             <span className="flex items-center gap-3">
-                                 Donate Now
+                                Donate Now
                                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                 </svg>
@@ -139,7 +157,7 @@ export default function Home() {
 
                         <button className="group bg-white/80 backdrop-blur-sm text-[#1B3F92] font-semibold px-10 py-5 rounded-full border-2 border-[#1B3F92]/20 hover:border-[#1B3F92]/50 transition-all duration-300 transform hover:scale-105 hover:shadow-xl">
                             <span className="flex items-center gap-3">
-                                 Learn Our Story
+                                Learn Our Story
                                 <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                 </svg>
@@ -174,7 +192,7 @@ export default function Home() {
                 <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent h-full pointer-events-none z-10"></div>
                 <div className="relative overflow-hidden rounded-t-[3rem] shadow-2xl">
                     <img
-                        src={childImage}
+                        src={childImageLarge}
                         alt="Happy Children"
                         className="w-full h-[70vh] object-cover transform hover:scale-105 transition-transform duration-700"
                     />
@@ -182,6 +200,84 @@ export default function Home() {
                     <div className="absolute bottom-8 left-8 text-white">
                         <h3 className="text-2xl font-bold mb-2">Every Child Deserves Love</h3>
                         <p className="text-lg opacity-90">Creating safe spaces for vulnerable children in Uganda</p>
+                    </div>
+                </div>
+            </div>
+
+            {/* UGANDA CONTEXT SECTION - New section with multiple images */}
+            <div className="bg-gradient-to-br from-blue-50 to-purple-50 py-20 px-4">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h2 className="text-5xl font-bold text-[#1B3F92] mb-4">
+                            Understanding Uganda's Need
+                        </h2>
+                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Uganda faces unique challenges in caring for children with disabilities. Here's the context of our mission.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-3 gap-8 mb-16">
+                        <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300">
+                            <img
+                                src={ugandaCountry}
+                                alt="Uganda Landscape"
+                                className="w-full h-48 object-cover rounded-2xl mb-4"
+                            />
+                            <h3 className="text-xl font-bold text-[#1B3F92] mb-2">Our Beautiful Uganda</h3>
+                            <p className="text-gray-600">A vibrant nation with rich culture and incredible people, facing challenges in healthcare accessibility.</p>
+                        </div>
+                        <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300">
+                            <img
+                                src={ugandaEducation}
+                                alt="Education in Uganda"
+                                className="w-full h-48 object-cover rounded-2xl mb-4"
+                            />
+                            <h3 className="text-xl font-bold text-[#1B3F92] mb-2">Education Access</h3>
+                            <p className="text-gray-600">Working to ensure every child, regardless of ability, has access to quality education and learning opportunities.</p>
+                        </div>
+                        <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300">
+                            <img
+                                src={ugandaOrphanage}
+                                alt="Orphanage Foundation"
+                                className="w-full h-48 object-cover rounded-2xl mb-4"
+                            />
+                            <h3 className="text-xl font-bold text-[#1B3F92] mb-2">Foundation of Hope</h3>
+                            <p className="text-gray-600">Building sustainable solutions for orphaned and abandoned children through comprehensive care programs.</p>
+                        </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 gap-12 items-center">
+                        <div className="space-y-6">
+                            <h3 className="text-3xl font-bold text-[#1B3F92]">Empowerment Through Action</h3>
+                            <p className="text-lg text-gray-700 leading-relaxed">
+                                Our empowerment projects focus on creating lasting change through skill development,
+                                therapy programs, and community integration. We believe every child has the potential
+                                to contribute meaningfully to society.
+                            </p>
+                            <ul className="space-y-2 text-gray-700">
+                                <li className="flex items-center gap-2">
+                                    <span className="w-2 h-2 bg-[#1B3F92] rounded-full"></span>
+                                    Vocational training and life skills development
+                                </li>
+                                <li className="flex items-center gap-2">
+                                    <span className="w-2 h-2 bg-[#1B3F92] rounded-full"></span>
+                                    Physical and occupational therapy programs
+                                </li>
+                                <li className="flex items-center gap-2">
+                                    <span className="w-2 h-2 bg-[#1B3F92] rounded-full"></span>
+                                    Community awareness and inclusion initiatives
+                                </li>
+                            </ul>
+                        </div>
+                        <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-xl">
+                            <img
+                                src={empowermentProjects}
+                                alt="Empowerment Projects"
+                                className="w-full h-64 object-cover rounded-2xl mb-4"
+                            />
+                            <h4 className="text-xl font-bold text-[#1B3F92] mb-2">Active Empowerment Programs</h4>
+                            <p className="text-gray-600">Our comprehensive programs address immediate needs while building long-term capacity for independence.</p>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -196,7 +292,7 @@ export default function Home() {
                                     src="/videos/Home_of_Hope_Doc3.mp4"
                                     controls
                                     className="w-full rounded-2xl shadow-lg"
-                                   
+
                                 >
                                     Sorry, your browser doesn't support embedded videos.
                                 </video>
@@ -204,13 +300,13 @@ export default function Home() {
                         </div>
 
                         <div className="order-1 lg:order-2 space-y-6">
-                            
+
 
                             <h2 className="text-4xl md:text-5xl font-bold text-[#1B3F92] leading-tight">
                                 Building Tomorrow,  Today <br />
-                               
-                                  
-                        
+
+
+
                             </h2>
 
                             <div className="space-y-4 text-gray-700">
@@ -252,11 +348,61 @@ export default function Home() {
                 </div>
             </div>
 
+            {/* CHILDREN'S STORIES - Additional images showcase */}
+            <div className="bg-gradient-to-br from-purple-50 to-pink-50 py-20 px-4">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h2 className="text-5xl font-bold text-[#1B3F92] mb-4">
+                            Meet Our Children
+                        </h2>
+                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Every child at Home of Hope has a unique story of resilience, hope, and transformation.
+                        </p>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div className="bg-white/60 backdrop-blur-sm rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+                            <img
+                                src={childImage}
+                                alt="Children at Home of Hope"
+                                className="w-full h-64 object-cover"
+                            />
+                            <div className="p-6">
+                                <h3 className="text-xl font-bold text-[#1B3F92] mb-2">Our Family</h3>
+                                <p className="text-gray-600">These beautiful children are the heart of our mission, each receiving individualized care and love.</p>
+                            </div>
+                        </div>
+                        <div className="bg-white/60 backdrop-blur-sm rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+                            <img
+                                src={childImageMain}
+                                alt="Child receiving care"
+                                className="w-full h-64 object-cover"
+                            />
+                            <div className="p-6">
+                                <h3 className="text-xl font-bold text-[#1B3F92] mb-2">Dedicated Care</h3>
+                                <p className="text-gray-600">Our trained staff provide round-the-clock care, ensuring each child feels safe and loved.</p>
+                            </div>
+                        </div>
+                        <div className="bg-white/60 backdrop-blur-sm rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+                            <img
+                                src={ugandaProvidence}
+                                alt="Providence care"
+                                className="w-full h-64 object-cover"
+                            />
+                            <div className="p-6">
+                                <h3 className="text-xl font-bold text-[#1B3F92] mb-2">Divine Providence</h3>
+                                <p className="text-gray-600">Through faith and community support, we provide hope and healing to those who need it most.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             {/* INFO CARDS - Modern bento box layout */}
             <div className="bg-gradient-to-br bg-#FFFFFF py-20 px-4">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
-                      
+
                         <h2 className="text-5xl font-bold text-[#1B3F92] mb-4">
                             Transforming Lives Through <br />
                             <span className=" bg-clip-text bg-gradient-to-r text-[#1B3F92]">
@@ -287,7 +433,7 @@ export default function Home() {
                                 </div>
 
                                 <div className={`${index % 2 === 0 ? "order-1 lg:order-2" : "order-1"} space-y-6`}>
-                                    
+
                                     <h3 className="text-4xl font-bold text-[#1B3F92] leading-tight">
                                         {card.title}
                                     </h3>
@@ -421,7 +567,7 @@ export default function Home() {
 
                     {/* Partners Header */}
                     <div className="text-center mb-20">
-                        
+
                         <h2 className="text-5xl font-bold text-[#1B3F92] mb-6">
                             Trusted Partners in <br />
                             <span className=" bg-clip-text bg-gradient-to-r text-[#1B3F92]">
@@ -437,7 +583,7 @@ export default function Home() {
                         <div className="grid md:grid-cols-3 gap-8 mt-16">
                             <div className="group bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                                 <img
-                                    src={dontion01}
+                                    src={homeofinternational}
                                     alt="Our Hope International"
                                     className="h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"
                                 />
@@ -455,12 +601,12 @@ export default function Home() {
                             </div>
                             <div className="group bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                                 <img
-                                    src={homeofinternational}
-                                    alt="Hope Builders International"
+                                    src={donationImage}
+                                    alt="Donation Support"
                                     className="h-16 mx-auto mb-4 group-hover:scale-110 transition-transform duration-300"
                                 />
-                                <h4 className="text-[#1B3F92] font-semibold text-lg mb-2">Hope Builders International</h4>
-                                <p className="text-gray-600 text-sm">Building infrastructure for the future</p>
+                                <h4 className="text-[#1B3F92] font-semibold text-lg mb-2">Community Donors</h4>
+                                <p className="text-gray-600 text-sm">Individual supporters making a difference</p>
                             </div>
                         </div>
                     </div>
@@ -473,7 +619,7 @@ export default function Home() {
                             </div>
                             <h3 className="text-4xl font-bold text-[#1B3F92] leading-tight">
                                 Every Child Deserves <br />
-                                <span className="text-transparent bg-clip-text bg-gradient-to-r text-[#1B3F92]">
+                                <span className="text-blue-600">
                                     a Bright Future
                                 </span>
                             </h3>
@@ -495,7 +641,7 @@ export default function Home() {
                             </div>
 
                             <div className="bg-gradient-to-br from-[#1B3F92]/10 to-blue-100/50 rounded-3xl p-8 border-l-4 border-[#1B3F92] shadow-lg">
-                               
+
                                 <p className="text-[#1B3F92] font-semibold text-lg italic leading-relaxed">
                                     "Thank you for believing in our mission. Together, we are creating brighter tomorrows
                                     for children who need it most."
@@ -515,7 +661,7 @@ export default function Home() {
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
                                 <div className="absolute bottom-6 left-6 text-white">
                                     <div className="inline-block bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full text-sm font-semibold mb-3">
-                                         Success Story
+                                        Success Story
                                     </div>
                                     <h4 className="text-2xl font-bold mb-2">Meet Timothy</h4>
                                     <p className="text-lg opacity-90">Age 8 • Dreams of becoming a teacher</p>
@@ -531,14 +677,14 @@ export default function Home() {
                                 <div className="flex gap-4">
                                     <button className="group bg-gradient-to-r from-[#1B3F92] to-blue-600 text-white px-6 py-3 rounded-full font-semibold hover:from-[#16316E] hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
                                         <span className="flex items-center gap-2">
-                                             Read His Story
+                                            Read His Story
                                             <svg className="w-4 h-4 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                             </svg>
                                         </span>
                                     </button>
                                     <button className="bg-white/80 backdrop-blur-sm text-[#1B3F92] px-6 py-3 rounded-full font-semibold border border-[#1B3F92]/20 hover:border-[#1B3F92]/50 transition-all duration-300 transform hover:scale-105">
-                                         Sponsor Timothy
+                                        Sponsor Timothy
                                     </button>
                                 </div>
                             </div>
@@ -548,7 +694,7 @@ export default function Home() {
                     {/* Call to Action - Modern donation cards */}
                     <div className="text-center">
                         <div className="inline-block bg-[#1B3F92]/10 text-[#1B3F92] px-6 py-3 rounded-full text-sm font-semibold mb-6">
-                             Take Action
+                            Take Action
                         </div>
                         <h3 className="text-4xl font-bold text-[#1B3F92] mb-6">
                             Your Donation Can <br />
@@ -559,9 +705,7 @@ export default function Home() {
                         <p className="text-lg text-gray-700 mb-12 max-w-4xl mx-auto leading-relaxed">
                             Join our community of supporters and help us provide medical care, education, and love
                             to children with disabilities in Uganda. Every contribution makes a real difference.
-                        </p>
-
-                        {/* Enhanced Donation Options */}
+                        </p>                        {/* Enhanced Donation Options */}
                         <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
                             <div className="group bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                                 <div className="relative">
@@ -581,7 +725,7 @@ export default function Home() {
                                     className="group w-full bg-gradient-to-r from-[#1B3F92] to-blue-600 text-white px-8 py-4 rounded-full font-bold hover:from-[#16316E] hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                                 >
                                     <span className="flex items-center justify-center gap-2">
-                                         Donate Now
+                                        Donate Now
                                         <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                         </svg>
@@ -592,22 +736,22 @@ export default function Home() {
                             <div className="group bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2">
                                 <div className="relative">
                                     <img
-                                        src={homeministrie}
-                                        alt="Home of Hope Ministries"
+                                        src={donationImage}
+                                        alt="Direct Donation"
                                         className="h-16 mx-auto mb-6 group-hover:scale-110 transition-transform duration-300"
                                     />
                                     <div className="absolute top-0 right-0 bg-blue-500 text-white px-3 py-1 rounded-full text-xs font-semibold">
                                         Direct Impact
                                     </div>
                                 </div>
-                                <h4 className="text-xl font-bold text-[#1B3F92] mb-4">Donate through Home of Hope Ministries</h4>
+                                <h4 className="text-xl font-bold text-[#1B3F92] mb-4">Direct Support to Home of Hope</h4>
                                 <p className="text-gray-600 mb-6">Direct support to our ministry and children's programs</p>
                                 <button
                                     onClick={() => navigate("/donation")}
                                     className="group w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full font-bold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                                 >
                                     <span className="flex items-center justify-center gap-2">
-                                         Donate Now
+                                        Donate Now
                                         <svg className="w-5 h-5 group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
                                         </svg>
@@ -649,7 +793,90 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </div>            {/* about us */}
+            </div>            {/* PROGRAMS SHOWCASE - Visual representation of our programs */}
+            <div className="bg-gradient-to-br from-green-50 to-blue-50 py-20 px-4">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h2 className="text-5xl font-bold text-[#1B3F92] mb-4">
+                            Our Programs in Action
+                        </h2>
+                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                            See how our comprehensive programs are making a real difference in the lives of children and families across Uganda.
+                        </p>
+                    </div>
+
+                    <div className="grid lg:grid-cols-2 gap-16 items-center mb-16">
+                        <div className="space-y-8">
+                            <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 shadow-xl">
+                                <h3 className="text-2xl font-bold text-[#1B3F92] mb-4">Comprehensive Care Programs</h3>
+                                <p className="text-gray-700 leading-relaxed mb-6">
+                                    From therapy and medical care to education and empowerment, our programs address every
+                                    aspect of a child's development and well-being.
+                                </p>
+                                <div className="grid grid-cols-2 gap-4">
+                                    <div className="bg-gradient-to-r from-blue-100 to-purple-100 rounded-xl p-4 text-center">
+                                        <div className="text-2xl font-bold text-[#1B3F92] mb-1">96</div>
+                                        <div className="text-sm text-gray-600">Children in Care</div>
+                                    </div>
+                                    <div className="bg-gradient-to-r from-green-100 to-teal-100 rounded-xl p-4 text-center">
+                                        <div className="text-2xl font-bold text-[#1B3F92] mb-1">7</div>
+                                        <div className="text-sm text-gray-600">Core Programs</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="bg-white/60 backdrop-blur-sm rounded-3xl overflow-hidden shadow-xl">
+                            <img
+                                src={ugandaEducation}
+                                alt="Education Programs"
+                                className="w-full h-80 object-cover"
+                            />
+                            <div className="p-6">
+                                <h4 className="text-xl font-bold text-[#1B3F92] mb-2">Education & Development</h4>
+                                <p className="text-gray-600">Providing quality education and skill development opportunities for children of all abilities.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <div className="bg-white/60 backdrop-blur-sm rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+                            <img
+                                src={empowermentProjects}
+                                alt="Empowerment Projects"
+                                className="w-full h-48 object-cover"
+                            />
+                            <div className="p-6">
+                                <h4 className="text-lg font-bold text-[#1B3F92] mb-2">Empowerment Projects</h4>
+                                <p className="text-gray-600">Building skills and confidence through vocational training and therapeutic programs.</p>
+                            </div>
+                        </div>
+                        <div className="bg-white/60 backdrop-blur-sm rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+                            <img
+                                src={ugandaOrphanage}
+                                alt="Orphanage Care"
+                                className="w-full h-48 object-cover"
+                            />
+                            <div className="p-6">
+                                <h4 className="text-lg font-bold text-[#1B3F92] mb-2">Residential Care</h4>
+                                <p className="text-gray-600">Providing safe, loving homes for children who need round-the-clock care and support.</p>
+                            </div>
+                        </div>
+                        <div className="bg-white/60 backdrop-blur-sm rounded-3xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-300">
+                            <img
+                                src={ugandaProvidence}
+                                alt="Community Support"
+                                className="w-full h-48 object-cover"
+                            />
+                            <div className="p-6">
+                                <h4 className="text-lg font-bold text-[#1B3F92] mb-2">Community Outreach</h4>
+                                <p className="text-gray-600">Extending our reach to support families and children in remote communities.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            {/* about us */}
             <div id="about">
                 <h1 className="text-4xl font-bold text-[#1B3F92] text-center py-8">About Us</h1>
                 {/* Edith Lukabwe */}
@@ -805,9 +1032,408 @@ export default function Home() {
                     </div>
                 </section>
             </div>
- <h1 className="text-4xl font-bold text-[#1B3F92] text-center py-8">programs</h1>
+            {/* PROGRAMS SECTION - Enhanced with images and modern layout */}
+            <div id="programs" className="bg-gradient-to-br from-blue-50 to-purple-50 py-20 px-4">
+                <div className="max-w-7xl mx-auto">
+                    <div className="text-center mb-16">
+                        <h1 className="text-5xl font-bold text-[#1B3F92] mb-4">Our Programs</h1>
+                        <p className="text-xl text-gray-600 max-w-3xl mx-auto">
+                            Comprehensive care and support programs designed to empower children with disabilities and their families
+                        </p>
+                    </div>
 
+                    {/* Center Based Therapy and Care */}
+                    <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 mb-12 shadow-xl">
+                        <div className="grid lg:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <h2 className="text-3xl font-bold text-[#1B3F92] mb-6">Center Based Therapy and Care</h2>
+                                <p className="text-gray-700 mb-4 leading-relaxed">
+                                    A number of activities are carried in the center/home and focus is put on resident CWDs in the two areas mentioned above.
+                                    Care is a general responsibility of all Home of Hope staff, they ensure that all the children with disabilities in the home/center
+                                    are well fed, cleaned, loved and protected. Currently there are thirty (30) children with disabilities in the home who are cared
+                                    for purely by home of hope.
+                                </p>
+                                <p className="text-gray-700 leading-relaxed">
+                                    Therapy at the center is aimed at promoting functional independence, strengthening weak muscles through weight bearing activities,
+                                    prevention of contractures and deformities. All the therapy activities are administered by the organizations' resident occupational
+                                    therapist and with help of home of hope staff. These activities are done on daily basis at the center.
+                                </p>
+                            </div>
+                            <div className="bg-white/80 rounded-2xl p-6 shadow-lg">
+                                <img
+                                    src={currentproject01}
+                                    alt="Center Based Therapy"
+                                    className="w-full h-64 object-cover rounded-xl mb-4"
+                                />
+                                <div className="text-center">
+                                    <h4 className="font-semibold text-[#1B3F92] mb-2">Daily Therapy Sessions</h4>
+                                    <p className="text-sm text-gray-600">Professional therapy and care provided daily to our resident children</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
 
+                    {/* Assessment and Outreach Clinics */}
+                    <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 mb-12 shadow-xl">
+                        <div className="grid lg:grid-cols-2 gap-8 items-center">
+                            <div className="order-2 lg:order-1">
+                                <img
+                                    src={ugandaEducation}
+                                    alt="Outreach Clinics"
+                                    className="w-full h-64 object-cover rounded-xl"
+                                />
+                                <div className="bg-gradient-to-r from-[#1B3F92]/10 to-blue-100/50 rounded-xl p-4 mt-4">
+                                    <h4 className="font-semibold text-[#1B3F92] mb-2">Community Reach</h4>
+                                    <p className="text-sm text-gray-600">Serving 4 districts with monthly assessment clinics</p>
+                                </div>
+                            </div>
+                            <div className="order-1 lg:order-2">
+                                <h2 className="text-3xl font-bold text-[#1B3F92] mb-6">Assessment and Outreach Clinics</h2>
+                                <p className="text-gray-700 leading-relaxed">
+                                    Currently the organization does perform assessments of new and old client through its outreach program. This program is carried out
+                                    in a number of villages in Jinja, Mayuge, Namutumba and Kayunga districts. There are four assessment clinics in a month and these are
+                                    on every Monday of the week in four selected centers of Butagaya, Nsinze, Kangulumira and Busuyi sub counties.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Home and Follow-up Visits */}
+                    <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 mb-12 shadow-xl">
+                        <div className="grid lg:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <h2 className="text-3xl font-bold text-[#1B3F92] mb-6">Home and Follow-up Visits</h2>
+                                <p className="text-gray-700 mb-4 leading-relaxed">
+                                    This activity is intended to assess the clients home environment, give client more therapy time, make adaptions were necessary and further
+                                    create community awareness on disability in order to reduce on stigma. A lot of focus is put on parent/care giver training during the home visits.
+                                    Lots of demonstrations are done and parents/caregivers are given opportunities to practice the different therapeutic techniques learnt from the therapist.
+                                </p>
+                                <p className="text-gray-700 leading-relaxed">
+                                    The therapist also assesses the clients' home environment for possible adaptations for easy mobility and productivity. At least up to 8 home visits
+                                    are made by the home of hope team. The sub counties were this program is carried out includes but not all, Bugembe town council, Kakira town council,
+                                    Mafubira sub county, Jinja town, Buwenge town council, Namasiga sub county and Kagoma sub county.
+                                </p>
+                            </div>
+                            <div className="bg-white/80 rounded-2xl p-6 shadow-lg">
+                                <img
+                                    src={ugandaProvidence}
+                                    alt="Home Visits"
+                                    className="w-full h-64 object-cover rounded-xl mb-4"
+                                />
+                                <div className="text-center">
+                                    <h4 className="font-semibold text-[#1B3F92] mb-2">Community Integration</h4>
+                                    <p className="text-sm text-gray-600">Bringing therapy and support directly to families' homes</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Income Generating Activities */}
+                    <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 mb-12 shadow-xl">
+                        <div className="grid lg:grid-cols-2 gap-8 items-center">
+                            <div className="order-2 lg:order-1">
+                                <img
+                                    src={empowermentProjects}
+                                    alt="Income Generating Activities"
+                                    className="w-full h-64 object-cover rounded-xl"
+                                />
+                                <div className="bg-gradient-to-r from-green-100 to-teal-100 rounded-xl p-4 mt-4">
+                                    <h4 className="font-semibold text-[#1B3F92] mb-2">Economic Empowerment</h4>
+                                    <p className="text-sm text-gray-600">Supporting families through sustainable income opportunities</p>
+                                </div>
+                            </div>
+                            <div className="order-1 lg:order-2">
+                                <h2 className="text-3xl font-bold text-[#1B3F92] mb-6">Income Generating Activities</h2>
+                                <p className="text-gray-700 leading-relaxed">
+                                    Home of Hope gives a certain amount of money to the parent of CWDs on loan. The money is then used to buy raw materials to make crafts like jewelry, mats, bags.
+                                    Home of hope then finds market for these products. From the profits, the parent can pay back the loan and continue with the business.
+                                    This activity is meant to help needy parents find a source of income to support their children. The organization also empowers those with running businesses
+                                    to increase on their capital.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Three-Column Program Cards */}
+                    <div className="grid md:grid-cols-3 gap-8 mb-12">
+                        {/* Training Workshops */}
+                        <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300">
+                            <img
+                                src={ugandaEducation}
+                                alt="Training Workshops"
+                                className="w-full h-48 object-cover rounded-xl mb-4"
+                            />
+                            <h3 className="text-xl font-bold text-[#1B3F92] mb-4">Training Workshops</h3>
+                            <p className="text-gray-700 text-sm mb-4">
+                                This program focuses on equipping parents, local leaders, opinion leaders, teachers and the community at large with knowledge on disability.
+                            </p>
+                            <ul className="text-sm text-gray-600 space-y-1">
+                                <li>• Training on children with disabilities rights</li>
+                                <li>• Trainings on income generating activities</li>
+                                <li>• Training teachers on working with CWDs</li>
+                                <li>• Prevention and management training</li>
+                            </ul>
+                        </div>
+
+                        {/* Child School Sponsorship */}
+                        <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300">
+                            <img
+                                src={childImageMain}
+                                alt="School Sponsorship"
+                                className="w-full h-48 object-cover rounded-xl mb-4"
+                            />
+                            <h3 className="text-xl font-bold text-[#1B3F92] mb-4">Child School Sponsorship</h3>
+                            <p className="text-gray-700 text-sm mb-4">
+                                This is a very new program in Home of Hope, currently it cares for the educational needs of three (3) children with disabilities.
+                            </p>
+                            <div className="bg-blue-50 rounded-lg p-3 text-sm">
+                                <p className="text-[#1B3F92] font-semibold">Current Status:</p>
+                                <p className="text-gray-600">51 children on waiting list</p>
+                                <p className="text-gray-600">37 with physical disabilities</p>
+                                <p className="text-gray-600">14 deaf children</p>
+                            </div>
+                        </div>
+
+                        {/* Epilepsy Medication */}
+                        <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-6 shadow-xl hover:shadow-2xl transition-all duration-300">
+                            <img
+                                src={currentproject02}
+                                alt="Epilepsy Medication"
+                                className="w-full h-48 object-cover rounded-xl mb-4"
+                            />
+                            <h3 className="text-xl font-bold text-[#1B3F92] mb-4">Epilepsy Medication</h3>
+                            <p className="text-gray-700 text-sm mb-4">
+                                After a research carried out by Home of Hope in its operational areas in Jinja district, it realized that there were a big number of
+                                epileptic patients in the villages who were not being treated.
+                            </p>
+                            <div className="bg-purple-50 rounded-lg p-3 text-sm">
+                                <p className="text-[#1B3F92] font-semibold">Reaching 70+ clients per clinic</p>
+                                <p className="text-gray-600">Monthly free medication program</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Adaptive Aids */}
+                    <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-8 mb-12 shadow-xl">
+                        <div className="grid lg:grid-cols-2 gap-8 items-center">
+                            <div>
+                                <h2 className="text-3xl font-bold text-[#1B3F92] mb-6">Adaptive Aids</h2>
+                                <p className="text-gray-700 mb-6 leading-relaxed">
+                                    Many of the children need wheelchairs and adaptive aids. The therapist assesses clients for different appliances according to the client's
+                                    needs and conditions. The clients are either referred or are provided with appliance by the organization. The organization gives up to a total
+                                    of 4 appliances to clients in a month.
+                                </p>
+                                <div className="grid md:grid-cols-2 gap-4">
+                                    <div className="bg-blue-50 rounded-lg p-4">
+                                        <h4 className="font-semibold text-[#1B3F92] mb-2">Made by Home of Hope:</h4>
+                                        <ul className="text-sm text-gray-600 space-y-1">
+                                            <li>• C.P chairs</li>
+                                            <li>• Corner seats</li>
+                                            <li>• Toilet seats</li>
+                                            <li>• Parallel bars</li>
+                                            <li>• Walking frames</li>
+                                        </ul>
+                                    </div>
+                                    <div className="bg-green-50 rounded-lg p-4">
+                                        <h4 className="font-semibold text-[#1B3F92] mb-2">Through Partnership:</h4>
+                                        <ul className="text-sm text-gray-600 space-y-1">
+                                            <li>• Wheel chairs</li>
+                                            <li>• KAFOs (Knee and Foot Orthotics)</li>
+                                            <li>• Artificial limbs</li>
+                                            <li>• Walkers & Calipers</li>
+                                            <li>• Standing frames</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div className="bg-white/80 rounded-2xl p-6 shadow-lg">
+                                <img
+                                    src={currentproject03}
+                                    alt="Adaptive Aids"
+                                    className="w-full h-64 object-cover rounded-xl mb-4"
+                                />
+                                <div className="text-center">
+                                    <h4 className="font-semibold text-[#1B3F92] mb-2">Mobility Solutions</h4>
+                                    <p className="text-sm text-gray-600">Custom adaptive aids to enhance independence and mobility</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    {/* Final Two Programs */}
+                    <div className="grid md:grid-cols-2 gap-8">
+                        {/* Nutrition Support */}
+                        <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-6 shadow-xl">
+                            <img
+                                src={childImage}
+                                alt="Nutrition Support"
+                                className="w-full h-48 object-cover rounded-xl mb-4"
+                            />
+                            <h3 className="text-2xl font-bold text-[#1B3F92] mb-4">Nutrition Support</h3>
+                            <p className="text-gray-700 text-sm mb-4">
+                                Over time, Home of Hope has identified many children with severe malnutrition. This is either because of inadequate food or because
+                                of poor feeding habits among children with disability especially cerebral palsy.
+                            </p>
+                            <div className="bg-orange-50 rounded-lg p-3">
+                                <p className="text-[#1B3F92] font-semibold text-sm">Currently supporting 40 children with malnutrition</p>
+                                <p className="text-gray-600 text-sm">Through soya porridge, milk, and Irish potatoes</p>
+                            </div>
+                        </div>
+
+                        {/* Drop-in Clinics & Surgery Support */}
+                        <div className="bg-white/60 backdrop-blur-sm rounded-3xl p-6 shadow-xl">
+                            <img
+                                src={ugandaOrphanage}
+                                alt="Clinical Support"
+                                className="w-full h-48 object-cover rounded-xl mb-4"
+                            />
+                            <h3 className="text-2xl font-bold text-[#1B3F92] mb-4">Drop-in Clinics & Surgery Support</h3>
+                            <div className="space-y-4">
+                                <div>
+                                    <h4 className="font-semibold text-[#1B3F92] mb-2">Drop-in Clinics</h4>
+                                    <p className="text-gray-700 text-sm">
+                                        These clinics are carried out on every Tuesday at Home of Hope therapy room. An average of 7 clients are attended to daily.
+                                    </p>
+                                </div>
+                                <div>
+                                    <h4 className="font-semibold text-[#1B3F92] mb-2">Surgery Support</h4>
+                                    <p className="text-gray-700 text-sm">
+                                        Supporting corrective surgery for Hydrocephalus, Spinal bifida, cleft pallets, club foots and other physical deformities.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {/* Our Need for Support */}
+            <p className="mb-4">
+                A number of activities are carried in the center/home and focus is put on resident CWDs in the two areas mentioned above.
+                Care is a general responsibility of all Home of Hope staff, they ensure that all the children with disabilities in the home/center
+                are well fed, cleaned, loved and protected. Currently there are thirty (30) children with disabilities in the home who are cared
+                for purely by home of hope.
+            </p>
+            <p className="mb-4">
+                Therapy at the center is aimed at promoting functional independence, strengthening weak muscles through weight bearing activities,
+                prevention of contractures and deformities. All the therapy activities are administered by the organizations’ resident occupational
+                therapist and with help of home of hope staff. These activities are done on daily basis at the center.
+            </p>
+
+            <h2 className="text-2xl font-bold mb-2">Assessment and Outreach Clinics</h2>
+            <p className="mb-4">
+                Currently the organization does perform assessments of new and old client through its outreach program. This program is carried out
+                in a number of villages in Jinja, Mayuge, Namutumba and Kayunga districts. There are four assessment clinics in a month and these are
+                on every Monday of the week in four selected centers of Butagaya, Nsinze, Kangulumira and Busuyi sub counties.
+            </p>
+
+            <h2 className="text-2xl font-bold mb-2">Home and Follow-up Visits</h2>
+            <p className="mb-4">
+                This activity is intended to assess the clients home environment, give client more therapy time, make adaptions were necessary and further
+                create community awareness on disability in order to reduce on stigma. A lot of focus is put on parent/care giver training during the home visits.
+                Lots of demonstrations are done and parents/caregivers are given opportunities to practice the different therapeutic techniques learnt from the therapist.
+            </p>
+            <p className="mb-4">
+                The therapist also assesses the clients’ home environment for possible adaptations for easy mobility and productivity. At least up to 8 home visits
+                are made by the home of hope team. The sub counties were this program is carried out includes but not all, Bugembe town council, Kakira town council,
+                Mafubira sub county, Jinja town, Buwenge town council, Namasiga sub county and Kagoma sub county.
+            </p>
+
+            <h2 className="text-2xl font-bold mb-2">Income Generating Activities</h2>
+            <p className="mb-4">
+                Home of Hope gives a certain amount of money to the parent of CWDs on loan. The money is then used to buy raw materials to make crafts like jewelry, mats, bags.
+                Home of hope then finds market for these products. From the profits, the parent can pay back the loan and continue with the business.
+                This activity is meant to help needy parents find a source of income to support their children. The organization also empowers those with running businesses
+                to increase on their capital.
+            </p>
+
+            <h2 className="text-2xl font-bold mb-2">Training Workshops</h2>
+            <p className="mb-4">
+                This program focuses on equipping parents, local leaders, opinion leaders, teachers and the community at large with knowledge on disability.
+                So far Home of Hope has conducted seven workshops over the years. These have been conducted at small scale at home of hope offices.
+                Much emphasis are put on the following areas:
+            </p>
+            <ul className="list-disc list-inside mb-4">
+                <li>Training on children with disabilities rights</li>
+                <li>Trainings on income generating activities</li>
+                <li>Training teachers on working with CWDs in schools</li>
+                <li>Trainings on prevention and management of different disabilities in the communities</li>
+            </ul>
+
+            <h2 className="text-2xl font-bold mb-2">Child School Sponsorship</h2>
+            <p className="mb-4">
+                This is a very new program in Home of Hope, currently it cares for the educational needs of three (3) children with disabilities.
+                Two of the above children go to El Shaddi Primary School (with inclusive education) and the other attend her classes at the Home of Hope
+                therapy room with help of a special needs teacher. This program has only lasted a year but still struggling due to inconsistent funding.
+                There is a total number of at least fifty one (51) children with disabilities in the waiting list. Thirty seven (37) of the above have
+                physical disabilities while the remaining (14) of them are deaf.
+            </p>
+
+            <h2 className="text-2xl font-bold mb-2">Epilepsy Medication</h2>
+            <p className="mb-4">
+                After a research carried out by Home of Hope in its operational areas in Jinja district, it realized that there were a big number of
+                epileptic patients in the villages who were not being treated. So the organization with help of its partners started a free monthly
+                epilepsy medication program. This is carried out during outreach clinics.
+            </p>
+            <p className="mb-4">
+                This program is currently reaching an average of up to 70 (seventy) clients per clinic. However there is still need to continue sensitizing
+                the local communities on the condition and the secondary disabilities that may occur as a result of severe epilepsy. The types of drugs
+                used during the clinics include: phenytoin, phenobarbitone, carbamazepine and folic acid.
+            </p>
+
+            <h2 className="text-2xl font-bold mb-2">Adaptive Aids</h2>
+            <p className="mb-4">
+                Many of the children need wheelchairs and adaptive aids. The therapist assesses clients for different appliances according to the client’s
+                needs and conditions. The clients are either referred or are provided with appliance by the organization. The organization gives up to a total
+                of 4 appliances to clients in a month. These adaptive aids are classified into two that is those which are made by home of hope and those which
+                are acquired from partner organization.
+            </p>
+            <p className="mb-2 font-semibold">Those made by Home of Hope:</p>
+            <ul className="list-disc list-inside mb-4">
+                <li>C.P chairs</li>
+                <li>Corner seats</li>
+                <li>Toilet seats</li>
+                <li>Parallel bars</li>
+                <li>Walking frames</li>
+            </ul>
+            <p className="mb-2 font-semibold">Adaptive Aids got through partnership:</p>
+            <ul className="list-disc list-inside mb-4">
+                <li>Wheel chairs</li>
+                <li>KAFOs (Knee and Foot Orthotics)</li>
+                <li>Artificial limbs</li>
+                <li>Walkers</li>
+                <li>Calipers</li>
+                <li>Standing frames</li>
+                <li>Parallel bars</li>
+                <li>Walking frames</li>
+            </ul>
+
+            <h2 className="text-2xl font-bold mb-2">Nutrition Support</h2>
+            <p className="mb-4">
+                Over time, Home of Hope has identified many children with severe malnutrition. This is either because of inadequate food or because
+                of poor feeding habits among children with disability especially cerebral palsy. Research shows that there's a close relationship between
+                Cerebral palsy and malnutrition. Most children with cerebral palsy have a problem with their feeding. They either have poor appetite or have
+                problems with digestion.
+            </p>
+            <p className="mb-4">
+                Home of Hope works with many children in this category, thus the need to give nutritional support. Three areas are emphasized i.e. Giving
+                of food supplies such as soya porridge, milk and Irish potatoes. Nutrition support is always given at Drop clinics, outreach clinics and during
+                home visits. We mainly concentrated on 3 activities while carrying out this program: At present, Home of Hope are taking care of 40 children with
+                malnutrition. All parents/care takers were given sensitization on nutrition, especially the use of locally available foods, the timing and quantity
+                of food given to their children. Assessing the child’s progress, through observation and many other ways.
+            </p>
+
+            <h2 className="text-2xl font-bold mb-2">Drop-in Clinics</h2>
+            <p className="mb-4">
+                These clinics are carried out on every Tuesday at Home of Hope therapy room. Clients come from nearby villages and beyond to attend therapy.
+                These clinics are conducted by the resident occupational therapist and in support of all Homes of Hope staff. In a day of the clinic an average
+                of 7 clients are attended to in addition to our resident clients.
+            </p>
+
+            <h2 className="text-2xl font-bold mb-2">Support for Corrective Surgery</h2>
+            <p className="mb-4">
+                Because Home of Hope does not have surgical services, yet sometimes receive children with cases that need surgery, the organization refer them to
+                places which offer the service. Home of Hope thus offer a certain percentage of the total costs towards the surgery.
+            </p>
             {/* Our Need for Support */}
             <section id="our-support" className="w-full py-16 px-4 md:px-16 bg-#FFFFFF text-center">
                 <h2 className="text-4xl font-bold text-[#1B3F92] mb-4">
@@ -885,7 +1511,7 @@ export default function Home() {
                         </div>
                         <h2 className="text-5xl font-bold text-[#1B3F92] mb-6">
                             Let's Connect & <br />
-                            <span className="text-transparent bg-clip-text bg-gradient-to-r text-[#1B3F92]">
+                            <span className="text-blue-600">
                                 Make a Difference
                             </span>
                         </h2>
