@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import childImage from "../../assets/images/chidimages.jpg";
 import homeOfHopeVideo from "../../assets/images/videos/Home_of_Hope_Doc3.mp4";
@@ -24,6 +24,9 @@ import staf05 from "../../assets/images/aboutus/staff05.jpg";
 import staf06 from "../../assets/images/aboutus/staff06.jpg";
 import ourmissionImage1 from "../../assets/images/aboutus/ourmission01.jpg";
 import video04 from "../../assets/images/videos/video03.mp4";
+import currentproject01 from "../../assets/images/kids/cuurentimag01.jpg";
+import currentproject02 from "../../assets/images/kids/cuurentimag02.jpg";
+import currentproject03 from "../../assets/images/kids/cuurentimag03.jpg";
 // Cards for mission, vision, support
 const cards = [
     {
@@ -59,21 +62,21 @@ Your support helps expand our facilities and provide medical care, mobility equi
 const projects = [
     {
         title: "AMAANYI CENTER",
-        image: "/amaanyi.jpg",
+        image: currentproject01,
         description:
             "Amaanyi is the Luganda word for Power! The Amaanyi Center is the first and only Center in Uganda dedicated to empowering youth with special needs to achieve their potential. The Center provides a holistic education including life skills, self-advocacy, vocational training, therapeutic support, and more.",
         highlight: "If you believe every child has potential donate now to this campaign.",
     },
     {
         title: "#NOMOREHIDDENCHILDREN",
-        image: "/hidden.jpg",
+        image: currentproject02,
         description:
             "#NoMoreHiddenChildren is a growing social movement championed by local volunteers in Uganda and abroad. Ambassadors search for children hidden away because of misunderstood disabilities. An estimated 1 million hidden children live in Uganda alone.",
         highlight: "If you believe we should live in a world with no more hidden children donate now to support this campaign.",
     },
     {
         title: "CHANCE FOR CHILDHOOD",
-        image: "/chance.jpg",
+        image: currentproject03,
         description:
             "This project enables early identification and intervention for children with special needs in even the most rural areas using mobile phone technology. We partner with Chance for Childhood to help every child play and feel accepted.",
         highlight: "If you believe every child should have the chance to play and feel accepted donate now to support this campaign.",
@@ -83,8 +86,25 @@ const projects = [
 export default function Home() {
     const navigate = useNavigate();
 
+    // Handle hash navigation when component mounts
+    useEffect(() => {
+        const hash = window.location.hash.substring(1);
+        if (hash) {
+            setTimeout(() => {
+                const element = document.getElementById(hash);
+                if (element) {
+                    const offsetTop = element.offsetTop - 80;
+                    window.scrollTo({
+                        top: offsetTop,
+                        behavior: 'smooth'
+                    });
+                }
+            }, 100);
+        }
+    }, []);
+
     return (
-        <section className="bg-[#FFFCF0] text-center relative overflow-hidden font-sans">
+        <section id="home" className="bg-[#FFFCF0] text-center relative overflow-hidden font-sans">
 
             {/* HERO */}
             <div className="max-w-4xl mx-auto px-4 pt-20 pb-12">
@@ -215,7 +235,7 @@ export default function Home() {
                     <div className="w-full md:w-1/2">
                         <div className="bg-[#FFFCF0] rounded-lg shadow-md p-6 flex flex-col md:flex-row gap-6">
 
-                            {/* Image and Caption */}
+                            {/* Image and Caption bg-[#FFFCF0] */}
                             <div className="flex flex-col items-center md:items-start">
                                 <img
                                     src={imageofvideo01} // Replace with correct image path
@@ -256,7 +276,7 @@ export default function Home() {
             </div>
 
             {/* SUPPORTERS & IMPACT SECTION */}
-            <section className="bg-[#FFFCF0] py-20 px-4">
+            <section id="supporters" className="bg-[#FFFCF0] py-20 px-4">
                 <div className="max-w-6xl mx-auto">
 
                     {/* Partners Header */}
@@ -386,172 +406,171 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </div>
-            {/* about us */}
-            <div>
+            </div>            {/* about us */}
+            <div id="about">
+                <h1 className="text-4xl font-bold text-[#1B3F92] text-center py-8">About Us</h1>
                 {/* Edith Lukabwe */}
- <section className="w-full py-16 px-4 md:px-16 bg-[#e0f7fa]">
-  <div className="max-w-7xl mx-auto">
-    <h2 className="text-4xl font-bold text-sky-700 mb-6">
-      Edith's Story (in her own words)
-    </h2>
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-      <div>
-        <img
-          src={Edithsimg}
-          alt="Edith and Derrick"
-          className="w-full h-auto rounded-xl shadow-md mb-4"
-        />
-        <p className="text-sm text-gray-600 mb-4">
-          Edith with her son Derrick
-        </p>
-        <p className="text-justify mb-3">
-          In 2000, God blessed me with my son Derrick. Shortly after birth, he
-          faced severe health challenges and was diagnosed with multiple
-          disabilities. Despite hardships, my family stayed strong, seeking
-          care and support for him.
-        </p>
-        <p className="text-justify mb-3">
-          In 2004, I joined a local charity to help other families with disabled
-          children. I soon realized many children were abandoned due to
-          disabilities and started caring for them in my own community.
-        </p>
-      </div>
-      <div>
-        <img
-          src={Edithsimg2}
-          alt="Edith Story"
-          className="w-full h-auto rounded-xl shadow-md mb-4"
-        />
-          <p className="text-sm text-gray-600 mb-4">
-          Edith Lukabwe at International Volunteer Day
-        </p>
-        <p className="text-justify mb-3">
-          After an accident in 2006, I felt called by God to fully dedicate my
-          life to these children. With support from friends, I founded Home of
-          Hope in 2007 with just six children.
-        </p>
-        <p className="text-justify mb-3">
-          Today, I care for nearly 100 abandoned children with disabilities,
-          providing love, therapy, and hope for their future.
-        </p>
-        <p className="text-justify font-semibold">~ Edith Lukabwe</p>
-      </div>
-    </div>
-  </div>
-</section>
-{/* Meet Our Staff */}
-            <section className="w-full py-16 px-4 md:px-16 bg-white">
-                <div className="max-w-7xl mx-auto">
-                    <h2 className="text-4xl font-bold text-sky-700 mb-6">Meet Our Staff</h2>
-                    <p className="mb-3">
-                        Our dedicated and compassionate staff give so much of themselves to
-                        provide loving care for the more than one hundred children at Home
-                        of Hope. Many of the children have severe disabilities and are
-                        extremely fragile requiring constant companionship, vigilance and
-                        special care.
-                    </p>
-                    <p className="mb-3">
-                        Paid through your donations, our wonderful staff members have been
-                        known to give their own money to help purchase medicines, equipment
-                        and clothing for the children, a testament to the wonderful people
-                        they are.
-                    </p>
-                    <p>
-                        To our incredible staff, God bless you and we could not do it
-                        without you!
-                    </p>
-                    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <section id="our-story" className="w-full py-16 px-4 md:px-16 bg-[#FFFCF0]">
+                    <div className="max-w-7xl mx-auto">
+                        <h2 className="text-4xl font-bold text-[#1B3F92] mb-6">
+                            Edith's Story (in her own words)
+                        </h2>
+                        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div>
+                                <img
+                                    src={Edithsimg}
+                                    alt="Edith and Derrick"
+                                    className="w-full h-auto rounded-xl shadow-md mb-4"
+                                />
+                                <p className="text-sm text-gray-600 mb-4">
+                                    Edith with her son Derrick
+                                </p>
+                                <p className="text-justify mb-3 text-[royalblue]">
+                                    In 2000, God blessed me with my son Derrick. Shortly after birth, he
+                                    faced severe health challenges and was diagnosed with multiple
+                                    disabilities. Despite hardships, my family stayed strong, seeking
+                                    care and support for him.
+                                </p>
+                                <p className="text-justify mb-3 text-[royalblue]">
+                                    In 2004, I joined a local charity to help other families with disabled
+                                    children. I soon realized many children were abandoned due to
+                                    disabilities and started caring for them in my own community.
+                                </p>
+                            </div>
+                            <div>
+                                <img
+                                    src={Edithsimg2}
+                                    alt="Edith Story"
+                                    className="w-full h-auto rounded-xl shadow-md mb-4"
+                                />
+                                <p className="text-sm text-gray-600 mb-4">
+                                    Edith Lukabwe at International Volunteer Day
+                                </p>
+                                <p className="text-justify mb-3 text-[royalblue]">
+                                    After an accident in 2006, I felt called by God to fully dedicate my
+                                    life to these children. With support from friends, I founded Home of
+                                    Hope in 2007 with just six children.
+                                </p>
+                                <p className="text-justify mb-3 text-[royalblue]">
+                                    Today, I care for nearly 100 abandoned children with disabilities,
+                                    providing love, therapy, and hope for their future.
+                                </p>
+                                <p className="text-justify font-semibold">~ Edith Lukabwe</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>                {/* Meet Our Staff */}
+                <section id="our-team" className="w-full py-16 px-4 md:px-16 bg-white">
+                    <div className="max-w-7xl mx-auto">
+                        <h2 className="text-4xl font-bold text-[#1B3F92] mb-6">Meet Our Staff</h2>
+                        <p className="mb-3 text-[royalblue]">
+                            Our dedicated and compassionate staff give so much of themselves to
+                            provide loving care for the more than one hundred children at Home
+                            of Hope. Many of the children have severe disabilities and are
+                            extremely fragile requiring constant companionship, vigilance and
+                            special care.
+                        </p>
+                        <p className="mb-3 text-[royalblue]">
+                            Paid through your donations, our wonderful staff members have been
+                            known to give their own money to help purchase medicines, equipment
+                            and clothing for the children, a testament to the wonderful people
+                            they are.
+                        </p>
+                        <p className="text-[royalblue]">
+                            To our incredible staff, God bless you and we could not do it
+                            without you!
+                        </p>
+                        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                            <img
+                                src={staf01}
+                                alt="Staff 1"
+                                className="w-full h-auto object-cover rounded-xl shadow-md"
+                            />
+                            <img
+                                src={staf02}
+                                alt="Staff 2"
+                                className="w-full h-auto object-cover rounded-xl shadow-md"
+                            />
+                            <img
+                                src={staf03}
+                                alt="Staff 3"
+                                className="w-full h-auto object-cover rounded-xl shadow-md"
+                            />
+                            <img
+                                src={staf04}
+                                alt="Staff 3"
+                                className="w-full h-auto object-cover rounded-xl shadow-md"
+                            />
+                            <img
+                                src={staf05}
+                                alt="Staff 3"
+                                className="w-full h-auto object-cover rounded-xl shadow-md"
+                            />
+                            <img
+                                src={staf06}
+                                alt="Staff 3"
+                                className="w-full h-auto object-cover rounded-xl shadow-md"
+                            />
+                        </div>
+                    </div>
+                </section>
+                {/* Our Mission */}
+                <section id="our-mission" className="w-full py-16 px-4 md:px-16 bg-white">
+                    <div className="max-w-7xl mx-auto">
+                        <h2 className="text-4xl font-bold text-[#1B3F92] mb-6">Our Mission</h2>
+                        <p className="mb-4 text-[royalblue]">
+                            Home of Hope is a registered community based organization in the
+                            Jinja district in Uganda. The organization has a home specifically
+                            for children with disabilities...
+                        </p>
+                        <ul className="list-disc pl-6 mb-6 space-y-2 text-[royalblue]">
+                            <p>Center based therapy and care</p>
+                            <p>Assessment Clinics/outreach clinics</p>
+                            <p>Home Visits</p>
+                            <p>Epilepsy Medication</p>
+                            <p>Adaptive Aids</p>
+                            <p>Drop in clinics</p>
+                            <p>Support for Corrective Surgery</p>
+                            <p>Nutrition support</p>
+                            <p>Income generating activities</p>
+                            <p>Training workshops</p>
+                            <p>Child School Sponsorship</p>
+                        </ul>
                         <img
-                            src={staf01}
-                            alt="Staff 1"
-                            className="w-full h-auto object-cover rounded-xl shadow-md"
-                        />
-                        <img
-                            src={staf02}
-                            alt="Staff 2"
-                            className="w-full h-auto object-cover rounded-xl shadow-md"
-                        />
-                        <img
-                            src={staf03}
-                            alt="Staff 3"
-                            className="w-full h-auto object-cover rounded-xl shadow-md"
-                        />
-                         <img
-                            src={staf04}
-                            alt="Staff 3"
-                            className="w-full h-auto object-cover rounded-xl shadow-md"
-                        />
-                         <img
-                            src={staf05}
-                            alt="Staff 3"
-                            className="w-full h-auto object-cover rounded-xl shadow-md"
-                        />
-                         <img
-                            src={staf06}
-                            alt="Staff 3"
-                            className="w-full h-auto object-cover rounded-xl shadow-md"
+                            src={ourmissionImage1}
+                            alt="Mission"
+                            className="w-full h-auto rounded-xl shadow-md"
                         />
                     </div>
-                </div>
-            </section>
-            {/* Our Mission */}
-            <section className="w-full py-16 px-4 md:px-16 bg-white">
-                <div className="max-w-7xl mx-auto">
-                    <h2 className="text-4xl font-bold text-sky-700 mb-6">Our Mission</h2>
-                    <p className="mb-4">
-                        Home of Hope is a registered community based organization in the
-                        Jinja district in Uganda. The organization has a home specifically
-                        for children with disabilities...
-                    </p>
-                    <ul className="list-disc pl-6 mb-6 space-y-2">
-                        <li>Center based therapy and care</li>
-                        <li>Assessment Clinics/outreach clinics</li>
-                        <li>Home Visits</li>
-                        <li>Epilepsy Medication</li>
-                        <li>Adaptive Aids</li>
-                        <li>Drop in clinics</li>
-                        <li>Support for Corrective Surgery</li>
-                        <li>Nutrition support</li>
-                        <li>Income generating activities</li>
-                        <li>Training workshops</li>
-                        <li>Child School Sponsorship</li>
-                    </ul>
-                    <img
-                        src={ourmissionImage1}
-                        alt="Mission"
-                        className="w-full h-auto rounded-xl shadow-md"
-                    />
-                </div>
-            </section>
+                </section>
 
-            {/* Our Vision */}
-            <section className="w-full py-16 px-4 md:px-16 bg-[#e0f7fa] text-center">
-                <h2 className="text-4xl font-bold text-sky-700 mb-6">Our Vision</h2>
-                <p className="italic mb-6 max-w-3xl mx-auto">
-                    “At Home of Hope, we are striving for socially accepted, included,
-                    well cared for, and involved community of children with multiple
-                    disabilities with self-help skills to live an independent life.”
-                    <br />~ Edith Lukabwe
-                </p>
-                <div className="flex justify-center">
-                    <video
-                        controls
-                        className="w-full md:w-2/3 rounded-xl shadow-md"
-                        src={video04}
-                    />
-                </div>
-            </section>
+                {/* Our Vision */}
+                <section id="our-vision" className="w-full py-16 px-4 md:px-16 bg-[#e0f7fa] text-center">
+                    <h2 className="text-4xl font-bold text-[#1B3F92] mb-6">Our Vision</h2>
+                    <p className="italic mb-6 max-w-3xl mx-auto text-[royalblue]">
+                        “At Home of Hope, we are striving for socially accepted, included,
+                        well cared for, and involved community of children with multiple
+                        disabilities with self-help skills to live an independent life.”
+                        <br />~ Edith Lukabwe
+                    </p>
+                    <div className="flex justify-center">
+                        <video
+                            controls
+                            className="w-full md:w-2/3 rounded-xl shadow-md"
+                            src={video04}
+                        />
+                    </div>
+                </section>
             </div>
-       
-           
+
+
 
             {/* Our Need for Support */}
-            <section className="w-full py-16 px-4 md:px-16 bg-white text-center">
-                <h2 className="text-4xl font-bold text-sky-700 mb-4">
+            <section id="our-support" className="w-full py-16 px-4 md:px-16 bg-white text-center">
+                <h2 className="text-4xl font-bold text-[#1B3F92] mb-4">
                     Our Need for Support
                 </h2>
-                <h3 className="text-2xl text-pink-600 mb-8 font-bold">
+                <h3 className="text-2xl text-[royalblue] mb-8 font-bold">
                     We are very much in need of your help...
                 </h3>
                 <div className="flex justify-center">
@@ -564,7 +583,7 @@ export default function Home() {
             </section>
 
             {/* CURRENT PROJECTS SECTION */}
-            <section className="bg-[#FFFCF0] text-white py-16 px-4">
+            <section id="current-projects" className="bg-[#FFFCF0] py-16 px-4">
                 <h2 className="text-3xl font-bold text-[#4169e1] text-center mb-10">
                     CURRENT PROJECTS:
                 </h2>

@@ -1,10 +1,21 @@
 @import "tailwindcss";
 /* index.css */
 
+/* Smooth scrolling for the whole document */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Ensure sections have proper spacing for the fixed navbar */
+section {
+  scroll-margin-top: 80px;
+}
+
 .clip-half-circle {
   clip-path: ellipse(50% 100% at 50% 0%);
   display: block;
 }
+
 .clip-polygon {
   clip-path: polygon(20% 0%, 100% 0%, 100% 100%, 20% 100%, 0% 50%);
 }

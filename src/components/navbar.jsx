@@ -1,82 +1,86 @@
 // Navbar.jsx
 
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 
 export default function Navbar() {
+    const [aboutDropdown, setAboutDropdown] = useState(false);
+    const [programsDropdown, setProgramsDropdown] = useState(false);
+
     return (
         <header className="fixed top-0 left-0 w-full z-50 bg-[#FFFCF0] shadow-sm">
             <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
                 {/* Logo */}
-                <div className="text-blue-800 text-xl ">
-                    home of hope
-                </div>
+                <Link to="/" className="text-blue-800 text-xl font-bold hover:text-blue-900 transition-colors">
+                    Home of Hope
+                </Link>
 
                 {/* Navigation Links */}
                 <nav className="flex gap-4">
                     {/* ABOUT Dropdown */}
                     <div className="relative group">
-                        <button className="flex items-center gap-1 px-4 py-2 border border-blue-800 text-blue-800 hover:bg-blue-50 uppercase">
+                        <button
+                            className="flex items-center gap-1 px-4 py-2 border border-blue-800 text-blue-800 hover:bg-blue-50 uppercase transition-colors"
+                            onMouseEnter={() => setAboutDropdown(true)}
+                            onMouseLeave={() => setAboutDropdown(false)}
+                        >
                             About
-                            <svg
-                                className="w-3 h-3 ml-1"
-                                fill="currentColor"
-                                viewBox="0 0 20 20"
-                            >
-                                <path
-                                    fillRule="evenodd"
-                                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.295l3.71-4.065a.75.75 0 111.08 1.04l-4.25 4.65a.75.75 0 01-1.08 0l-4.25-4.65a.75.75 0 01.02-1.06z"
-                                    clipRule="evenodd"
-                                />
+                            <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
 
-                        <div className="absolute left-0 mt-2 w-56 bg-white text-black shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200 z-50">
-                            <Link to="/ediths-story" className="block px-4 py-2 hover:bg-gray-100">Edith's Story</Link>
-                            <Link to="/staff" className="block px-4 py-2 hover:bg-gray-100">Meet Our Staff</Link>
-                            <Link to="/mission" className="block px-4 py-2 hover:bg-gray-100">Our Mission</Link>
-                            <Link to="/vision" className="block px-4 py-2 hover:bg-gray-100">Our Vision</Link>
-                            <Link to="/support" className="block px-4 py-2 hover:bg-gray-100">Our Need for Support</Link>
-                        </div>
+                        {/* About Dropdown Menu */}
+                        {aboutDropdown && (
+                            <div
+                                className="absolute top-full left-0 mt-1 w-48 bg-white border border-gray-200 shadow-lg rounded-md z-50"
+                                onMouseEnter={() => setAboutDropdown(true)}
+                                onMouseLeave={() => setAboutDropdown(false)}
+                            >
+                                <Link to="/about/our-story" className="block px-4 py-2 text-blue-800 hover:bg-blue-50 transition-colors">Our Story</Link>
+                                <Link to="/about/mission" className="block px-4 py-2 text-blue-800 hover:bg-blue-50 transition-colors">Our Mission</Link>
+                                <Link to="/about/vision" className="block px-4 py-2 text-blue-800 hover:bg-blue-50 transition-colors">Our Vision</Link>
+                                <Link to="/about/team" className="block px-4 py-2 text-blue-800 hover:bg-blue-50 transition-colors">Our Team</Link>
+                                <Link to="/about/impact" className="block px-4 py-2 text-blue-800 hover:bg-blue-50 transition-colors">Our Impact</Link>
+                            </div>
+                        )}
                     </div>
 
                     {/* PROGRAMS Dropdown */}
                     <div className="relative group">
-                        <button className="flex items-center gap-1 px-4 py-2 border border-blue-800 text-blue-800 hover:bg-blue-50 uppercase">
+                        <button
+                            className="flex items-center gap-1 px-4 py-2 border border-blue-800 text-blue-800 hover:bg-blue-50 uppercase transition-colors"
+                            onMouseEnter={() => setProgramsDropdown(true)}
+                            onMouseLeave={() => setProgramsDropdown(false)}
+                        >
                             Programs
-                            <svg
-                                className="w-3 h-3 ml-1"
-                                fill="currentColor"
-                                viewBox="0 0 20 20"
-                            >
-                                <path
-                                    fillRule="evenodd"
-                                    d="M5.23 7.21a.75.75 0 011.06.02L10 11.295l3.71-4.065a.75.75 0 111.08 1.04l-4.25 4.65a.75.75 0 01-1.08 0l-4.25-4.65a.75.75 0 01.02-1.06z"
-                                    clipRule="evenodd"
-                                />
+                            <svg className="w-4 h-4 ml-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                             </svg>
                         </button>
 
-                        <div className="absolute left-0 mt-2 w-72 bg-white text-black shadow-lg opacity-0 invisible group-hover:opacity-100 group-hover:visible transition duration-200 z-50">
-                            <Link to="/center-care" className="block px-4 py-2 hover:bg-gray-100">Center Based Therapy and Care</Link>
-                            <Link to="/assessment" className="block px-4 py-2 hover:bg-gray-100">Assessment and Outreach Clinics</Link>
-                            <Link to="/home-visits" className="block px-4 py-2 hover:bg-gray-100">Home and Follow-up Visits</Link>
-                            <Link to="/epilepsy" className="block px-4 py-2 hover:bg-gray-100">Epilepsy Medication</Link>
-                            <Link to="/adaptive-aids" className="block px-4 py-2 hover:bg-gray-100">Adaptive Aids</Link>
-                            <Link to="/drop-in" className="block px-4 py-2 hover:bg-gray-100">Drop-in Clinics</Link>
-                            <Link to="/corrective-surgery" className="block px-4 py-2 hover:bg-gray-100">Support for Corrective Surgery</Link>
-                            <Link to="/nutrition" className="block px-4 py-2 hover:bg-gray-100">Nutrition Support</Link>
-                            <Link to="/income-activities" className="block px-4 py-2 hover:bg-gray-100">Income Generating Activities</Link>
-                            <Link to="/training" className="block px-4 py-2 hover:bg-gray-100">Training Workshops</Link>
-                            <Link to="/child-sponsorship" className="block px-4 py-2 hover:bg-gray-100">Child School Sponsorship</Link>
-                        </div>
+                        {/* Programs Dropdown Menu */}
+                        {programsDropdown && (
+                            <div
+                                className="absolute top-full left-0 mt-1 w-48 bg-white border border-gray-200 shadow-lg rounded-md z-50"
+                                onMouseEnter={() => setProgramsDropdown(true)}
+                                onMouseLeave={() => setProgramsDropdown(false)}
+                            >
+                                <Link to="/programs/education" className="block px-4 py-2 text-blue-800 hover:bg-blue-50 transition-colors">Education</Link>
+                                <Link to="/programs/orphanage" className="block px-4 py-2 text-blue-800 hover:bg-blue-50 transition-colors">Orphanage Care</Link>
+                                <Link to="/programs/empowerment" className="block px-4 py-2 text-blue-800 hover:bg-blue-50 transition-colors">Empowerment Projects</Link>
+                                <Link to="/programs/healthcare" className="block px-4 py-2 text-blue-800 hover:bg-blue-50 transition-colors">Healthcare</Link>
+                                <Link to="/programs/community" className="block px-4 py-2 text-blue-800 hover:bg-blue-50 transition-colors">Community Development</Link>
+                            </div>
+                        )}
                     </div>
 
                     {/* Other Links */}
-                    <Link to="/news" className="px-4 py-2 border border-blue-800 text-blue-800 hover:bg-blue-50 uppercase">News</Link>
-                    <Link to="/services" className="px-4 py-2 border border-blue-800 text-blue-800 hover:bg-blue-50 uppercase">Services</Link>
-                    <Link to="/benefits" className="px-4 py-2 border border-blue-800 text-blue-800 hover:bg-blue-50 uppercase">Benefits</Link>
-                    <Link to="/contact" className="px-4 py-2 bg-blue-800 text-white hover:bg-blue-900 uppercase">Contact</Link>
+                    <Link to="/news" className="px-4 py-2 border border-blue-800 text-blue-800 hover:bg-blue-50 uppercase transition-colors">News</Link>
+                    <Link to="/services" className="px-4 py-2 border border-blue-800 text-blue-800 hover:bg-blue-50 uppercase transition-colors">Services</Link>
+                    <Link to="/benefits" className="px-4 py-2 border border-blue-800 text-blue-800 hover:bg-blue-50 uppercase transition-colors">Benefits</Link>
+                    <Link to="/donate" className="px-4 py-2 bg-orange-500 text-white hover:bg-orange-600 uppercase transition-colors">Donate</Link>
+                    <Link to="/contact" className="px-4 py-2 bg-blue-800 text-white hover:bg-blue-900 uppercase transition-colors">Contact</Link>
                 </nav>
             </div>
         </header>
