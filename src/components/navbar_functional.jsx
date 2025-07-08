@@ -37,18 +37,18 @@ export default function NavbarFunctional() {
         <header className="fixed top-0 left-0 w-full z-50 bg-white shadow-lg">
             <div className="max-w-7xl mx-auto flex justify-between items-center p-4">
                 {/* Logo */}
-                <Link to="/" className="text-[#1B3F92] text-2xl font-bold hover:text-blue-900 transition-colors">
+                <Link to="/" className="text-[#1B3F92] text-2xl font-bold  hover:text-blue-900 transition-colors">
                     <span className="text-orange-500">Home</span> of Hope
                 </Link>
 
                 {/* Mobile Menu Button */}
-                <button
+                <button 
                     className="md:hidden text-[#1B3F92] hover:text-blue-900 transition-colors"
                     onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
                 >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                            d={mobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} 
+                              d={mobileMenuOpen ? "M6 18L18 6M6 6l12 12" : "M4 6h16M4 12h16M4 18h16"} />
                     </svg>
                 </button>
 
@@ -82,31 +82,31 @@ export default function NavbarFunctional() {
                                 onMouseEnter={() => setAboutDropdown(true)}
                                 onMouseLeave={() => setAboutDropdown(false)}
                             >
-                                <button
+                                <button 
                                     onClick={() => handleNavigation('/', 'our-story')}
                                     className="block w-full text-left px-4 py-2 text-[#1B3F92] hover:bg-blue-50 transition-colors"
                                 >
                                     Our Story
                                 </button>
-                                <button
+                                <button 
                                     onClick={() => handleNavigation('/', 'our-mission')}
                                     className="block w-full text-left px-4 py-2 text-[#1B3F92] hover:bg-blue-50 transition-colors"
                                 >
                                     Our Mission
                                 </button>
-                                <button
+                                <button 
                                     onClick={() => handleNavigation('/', 'our-vision')}
                                     className="block w-full text-left px-4 py-2 text-[#1B3F92] hover:bg-blue-50 transition-colors"
                                 >
                                     Our Vision
                                 </button>
-                                <button
+                                <button 
                                     onClick={() => handleNavigation('/', 'our-team')}
                                     className="block w-full text-left px-4 py-2 text-[#1B3F92] hover:bg-blue-50 transition-colors"
                                 >
                                     Our Team
                                 </button>
-                                <button
+                                <button 
                                     onClick={() => handleNavigation('/', 'supporters')}
                                     className="block w-full text-left px-4 py-2 text-[#1B3F92] hover:bg-blue-50 transition-colors"
                                 >
@@ -136,19 +136,19 @@ export default function NavbarFunctional() {
                                 onMouseEnter={() => setProgramsDropdown(true)}
                                 onMouseLeave={() => setProgramsDropdown(false)}
                             >
-                                <button
+                                <button 
                                     onClick={() => handleNavigation('/', 'current-projects')}
                                     className="block w-full text-left px-4 py-2 text-[#1B3F92] hover:bg-blue-50 transition-colors"
                                 >
                                     Current Projects
                                 </button>
-                                <button
+                                <button 
                                     onClick={() => handleNavigation('/', 'our-mission')}
                                     className="block w-full text-left px-4 py-2 text-[#1B3F92] hover:bg-blue-50 transition-colors"
                                 >
                                     Healthcare
                                 </button>
-                                <button
+                                <button 
                                     onClick={() => handleNavigation('/', 'our-support')}
                                     className="block w-full text-left px-4 py-2 text-[#1B3F92] hover:bg-blue-50 transition-colors"
                                 >
@@ -186,29 +186,29 @@ export default function NavbarFunctional() {
                             >
                                 Home
                             </button>
-
+                            
                             {/* About Section */}
                             <div className="border-l-2 border-[#1B3F92] pl-4">
                                 <p className="font-semibold text-[#1B3F92] mb-2">About</p>
-                                <button
+                                <button 
                                     onClick={() => handleNavigation('/', 'our-story')}
                                     className="block w-full text-left px-2 py-1 text-[#1B3F92] hover:bg-blue-50 transition-colors rounded text-sm"
                                 >
                                     Our Story
                                 </button>
-                                <button
+                                <button 
                                     onClick={() => handleNavigation('/', 'our-mission')}
                                     className="block w-full text-left px-2 py-1 text-[#1B3F92] hover:bg-blue-50 transition-colors rounded text-sm"
                                 >
                                     Our Mission
                                 </button>
-                                <button
+                                <button 
                                     onClick={() => handleNavigation('/', 'our-vision')}
                                     className="block w-full text-left px-2 py-1 text-[#1B3F92] hover:bg-blue-50 transition-colors rounded text-sm"
                                 >
                                     Our Vision
                                 </button>
-                                <button
+                                <button 
                                     onClick={() => handleNavigation('/', 'our-team')}
                                     className="block w-full text-left px-2 py-1 text-[#1B3F92] hover:bg-blue-50 transition-colors rounded text-sm"
                                 >
@@ -219,13 +219,13 @@ export default function NavbarFunctional() {
                             {/* Programs Section */}
                             <div className="border-l-2 border-[#1B3F92] pl-4">
                                 <p className="font-semibold text-[#1B3F92] mb-2">Programs</p>
-                                <button
+                                <button 
                                     onClick={() => handleNavigation('/', 'current-projects')}
                                     className="block w-full text-left px-2 py-1 text-[#1B3F92] hover:bg-blue-50 transition-colors rounded text-sm"
                                 >
                                     Current Projects
                                 </button>
-                                <button
+                                <button 
                                     onClick={() => handleNavigation('/', 'our-support')}
                                     className="block w-full text-left px-2 py-1 text-[#1B3F92] hover:bg-blue-50 transition-colors rounded text-sm"
                                 >
@@ -233,29 +233,29 @@ export default function NavbarFunctional() {
                                 </button>
                             </div>
 
-                            <Link
-                                to="/news"
+                            <Link 
+                                to="/news" 
                                 className="px-4 py-2 text-[#1B3F92] hover:bg-blue-50 transition-colors rounded"
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 News
                             </Link>
-                            <Link
-                                to="/services"
+                            <Link 
+                                to="/services" 
                                 className="px-4 py-2 text-[#1B3F92] hover:bg-blue-50 transition-colors rounded"
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 Services
                             </Link>
-                            <Link
-                                to="/donation"
+                            <Link 
+                                to="/donation" 
                                 className="px-4 py-2 bg-orange-500 text-white hover:bg-orange-600 transition-colors rounded text-center"
                                 onClick={() => setMobileMenuOpen(false)}
                             >
                                 Donate
                             </Link>
-                            <Link
-                                to="/contact"
+                            <Link 
+                                to="/contact" 
                                 className="px-4 py-2 bg-[#1B3F92] text-white hover:bg-blue-900 transition-colors rounded text-center"
                                 onClick={() => setMobileMenuOpen(false)}
                             >

@@ -1,11 +1,9 @@
 import React, { useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import childImage from "../../assets/images/chidimages.jpg";
-import homeOfHopeVideo from "../../assets/images/videos/Home_of_Hope_Doc3.mp4";
 import ourvisionImage from "../../assets/images/OUR-VISION.jpg";
 import ourmissionImage from "../../assets/images/OUR-MISSION.jpg";
 import ourneedforsupportimage from "../../assets/images/OUR-NEED -FOR -SUPPORT.jpg";
-import video02 from "../../assets/images/videos/viode-01.mp4"
 import imageofvideo01 from "../../assets/images/videos/image-of-video01.jpg"
 import facebookicon from "../../assets/images/videos/image-of-facebook-icon.jpg";
 import facebookimage from "../../assets/images/videos/image-of-facebook.jpg"
@@ -13,7 +11,6 @@ import dontion01 from "../../assets/images/donation-image02.gif";
 import homeministrie from "../../assets/images/donation-image02.gif";
 import homeofinternational from "../../assets/images/home-ofhope-interntinal.gif";
 import timothyimg from "../../assets/images/kids/timothy-imag.png";
-import video03 from "../../assets/images/videos/video-02.mp4";
 import Edithsimg from "../../assets/images/aboutus/Edith'simg.jpg";
 import Edithsimg2 from "../../assets/images/aboutus/Edith'simg2.jpg";
 import staf01 from "../../assets/images/aboutus/staff01jpg.jpg";
@@ -23,7 +20,6 @@ import staf04 from "../../assets/images/aboutus/staff004.jpg";
 import staf05 from "../../assets/images/aboutus/staff05.jpg";
 import staf06 from "../../assets/images/aboutus/staff06.jpg";
 import ourmissionImage1 from "../../assets/images/aboutus/ourmission01.jpg";
-import video04 from "../../assets/images/videos/video03.mp4";
 import currentproject01 from "../../assets/images/kids/cuurentimag01.jpg";
 import currentproject02 from "../../assets/images/kids/cuurentimag02.jpg";
 import currentproject03 from "../../assets/images/kids/cuurentimag03.jpg";
@@ -134,7 +130,7 @@ export default function Home() {
             <div className="bg-[#FFFCF0] flex flex-col md:flex-row items-center justify-center p-10 gap-10">
                 <div className="w-full md:w-2/3">
                     <video
-                        src={homeOfHopeVideo}
+                        src="/videos/Home_of_Hope_Doc3.mp4"
                         controls
                         className="w-full max-w-3xl mx-auto rounded-lg shadow-xl"
 
@@ -180,7 +176,7 @@ export default function Home() {
                     {/* Left: Video */}
                     <div className="w-full md:w-1/2">
                         <video
-                            src={video02} // Replace with actual video file or path
+                            src="/videos/viode-01.mp4"
                             controls
                             className="w-full rounded-lg shadow-xl"
                         >
@@ -312,7 +308,7 @@ export default function Home() {
                         </div>
 
                         {/* Featured Child Story */}
-                        <div className="bg-white rounded-2xl shadow-xl overflow-hidden">
+                        <div className="bg-[#FFFCF0] rounded-2xl shadow-xl overflow-hidden">
                             <div className="relative">
                                 <img
                                     src={timothyimg}
@@ -350,7 +346,7 @@ export default function Home() {
 
                         {/* Donation Options */}
                         <div className="flex flex-col sm:flex-row justify-center gap-6">
-                            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                            <div className="bg-[#FFFCF0] rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
                                 <img src={homeofinternational} alt="Our Hope International" className="h-12 mx-auto mb-3" />
                                 <h4 className="font-semibold text-[#1B3F92] mb-2">Donate through Our Hope International</h4>
                                 <button
@@ -361,7 +357,7 @@ export default function Home() {
                                 </button>
                             </div>
 
-                            <div className="bg-white rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
+                            <div className="bg-[#FFFCF0] rounded-xl shadow-lg p-6 hover:shadow-xl transition-shadow">
                                 <img src={homeministrie} alt="Home of Hope" className="h-12 mx-auto mb-3" />
                                 <h4 className="font-semibold text-[#1B3F92] mb-2">Donate through Home of Hope Ministries</h4>
                                 <button
@@ -383,7 +379,7 @@ export default function Home() {
                     {/* Left: Video */}
                     <div className="w-full md:w-1/2">
                         <video
-                            src={video03} // Replace with actual video file or path
+                            src="/videos/video-02.mp4"
                             controls
                             className="w-full rounded-lg shadow-xl"
                         >
@@ -460,7 +456,7 @@ export default function Home() {
                         </div>
                     </div>
                 </section>                {/* Meet Our Staff */}
-                <section id="our-team" className="w-full py-16 px-4 md:px-16 bg-white">
+                <section id="our-team" className="w-full py-16 px-4 md:px-16 bg-[#FFFCF0]">
                     <div className="max-w-7xl mx-auto">
                         <h2 className="text-4xl font-bold text-[#1B3F92] mb-6">Meet Our Staff</h2>
                         <p className="mb-3 text-[royalblue]">
@@ -515,7 +511,7 @@ export default function Home() {
                     </div>
                 </section>
                 {/* Our Mission */}
-                <section id="our-mission" className="w-full py-16 px-4 md:px-16 bg-white">
+                <section id="our-mission" className="w-full py-16 px-4 md:px-16 bg-[#FFFCF0]">
                     <div className="max-w-7xl mx-auto">
                         <h2 className="text-4xl font-bold text-[#1B3F92] mb-6">Our Mission</h2>
                         <p className="mb-4 text-[royalblue]">
@@ -545,7 +541,7 @@ export default function Home() {
                 </section>
 
                 {/* Our Vision */}
-                <section id="our-vision" className="w-full py-16 px-4 md:px-16 bg-[#e0f7fa] text-center">
+                <section id="our-vision" className="w-full py-16 px-4 md:px-16 bg-[#FFFCF0] text-center">
                     <h2 className="text-4xl font-bold text-[#1B3F92] mb-6">Our Vision</h2>
                     <p className="italic mb-6 max-w-3xl mx-auto text-[royalblue]">
                         “At Home of Hope, we are striving for socially accepted, included,
@@ -557,7 +553,7 @@ export default function Home() {
                         <video
                             controls
                             className="w-full md:w-2/3 rounded-xl shadow-md"
-                            src={video04}
+                            src="/videos/video03.mp4"
                         />
                     </div>
                 </section>
@@ -566,7 +562,7 @@ export default function Home() {
 
 
             {/* Our Need for Support */}
-            <section id="our-support" className="w-full py-16 px-4 md:px-16 bg-white text-center">
+            <section id="our-support" className="w-full py-16 px-4 md:px-16 bg-[#FFFCF0] text-center">
                 <h2 className="text-4xl font-bold text-[#1B3F92] mb-4">
                     Our Need for Support
                 </h2>
@@ -574,11 +570,13 @@ export default function Home() {
                     We are very much in need of your help...
                 </h3>
                 <div className="flex justify-center">
-                    <img
-                        src={homeOfHopeVideo}
-                        alt="Need for Support"
+                    <video
+                        src="/videos/Home_of_Hope_Doc3.mp4"
+                        controls
                         className="w-full md:w-2/3 rounded-xl shadow-md"
-                    />
+                    >
+                        Sorry, your browser doesn't support embedded videos.
+                    </video>
                 </div>
             </section>
 
@@ -625,7 +623,7 @@ export default function Home() {
                     href="https://your-donation-link.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-white text-[#1B3F92] font-bold px-10 py-4 rounded-full hover:bg-gray-200 transition"
+                    className="inline-block bg-[#FFFCF0] text-[#1B3F92] font-bold px-10 py-4 rounded-full hover:bg-gray-200 transition"
                 >
                     Donate Now
                 </a>
