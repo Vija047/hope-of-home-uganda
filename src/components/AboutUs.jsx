@@ -11,7 +11,7 @@ import ourmissionImage1 from "../assets/images/aboutus/ourmission01.jpg";
 
 const AboutUs = () => {
     return (
-        <div id="about" className="bg-gradient-to-br from-white to-blue-50 min-h-screen font-sans">
+        <div id="about" className="bg-#FFFFFF min-h-screen font-sans">
             <h1 className="text-5xl font-black text-[#1B3F92] text-center py-12 bg-gradient-to-r from-[#1B3F92]/10 to-blue-100/30 rounded-b-3xl shadow-lg mb-8 tracking-tight">About Us</h1>
             {/* Edith Lukabwe */}
             <section id="our-story" className="max-w-7xl mx-auto py-16 px-4 md:px-16">

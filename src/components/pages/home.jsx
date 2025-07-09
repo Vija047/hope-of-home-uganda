@@ -53,22 +53,13 @@ export default function Home() {
     }, []);
 
     return (
-        <section id="home" className="bg-gradient-to-br bg-#FFFFFF   text-center relative overflow-hidden font-sans">
+        <section id="home" className="bg-gradient-to-br bg-white   text-center relative overflow-hidden font-sans">
             {/* HERO - Modern gradient background with floating elements */}
             <div className="relative min-h-screen flex items-center justify-center">
-                {/* Background hero image */}
-                <div className="absolute inset-0 z-0">
-                    <img
-                        src={peopleUgandaGroup}
-                        alt="Children in Uganda"
-                        className="w-full h-full object-cover opacity-20"
-                    />
-                    <div className="absolute inset-0 bg-gradient-to-br from-white/90 to-blue-50/80"></div>
-                </div>
 
                 {/* Animated background elements */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute top-20 left-10 w-32 h-32 bg-#FFFFFF rounded-full blur-xl animate-pulse"></div>
+                    <div className="absolute top-20 left-10 w-32 h-32 bg-white rounded-full blur-xl animate-pulse"></div>
                     <div className="absolute top-40 right-20 w-48 h-48 bg-yellow-200/20 rounded-full blur-xl animate-pulse delay-1000"></div>
                     <div className="absolute bottom-20 left-1/3 w-40 h-40 bg-pink-200/20 rounded-full blur-xl animate-pulse delay-2000"></div>
                 </div>
@@ -147,7 +138,7 @@ export default function Home() {
                 </div>
             </div>
             {/* UGANDA CONTEXT SECTION - New section with multiple images */}
-            <div className="bg-gradient-to-br  bg-#FFFFFF py-20 px-4">
+            <div className="bg-gradient-to-br  bg-white py-20 px-4">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-5xl font-bold text-[#1B3F92] mb-4">
@@ -224,7 +215,7 @@ export default function Home() {
                 </div>
             </div>
             {/* VIDEO + TEXT - Modern card layout with glassmorphism */}
-            <div className="bg-gradient-to-br bg-#FFFFFF py-20 px-4">
+            <div className="bg-gradient-to-br bg-white py-20 px-4">
                 <div className="max-w-7xl mx-auto">
                     <div className="grid lg:grid-cols-2 gap-12 items-center">
                         <div className="order-2 lg:order-1">
@@ -291,7 +282,7 @@ export default function Home() {
 
 
             {/* CHILDREN'S STORIES - Additional images showcase */}
-            <div className=" bg-#FFFFFF py-20 px-4">
+            <div className=" bg-white py-20 px-4">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-5xl font-bold text-[#1B3F92] mb-4">
@@ -341,7 +332,7 @@ export default function Home() {
             </div>
 
             {/* INFO CARDS - Modern bento box layout */}
-            <div className="bg-gradient-to-br bg-#FFFFFF py-20 px-4">
+            <div className="bg-gradient-to-br bg-white py-20 px-4">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
 
@@ -401,7 +392,7 @@ export default function Home() {
                 </div>
             </div>
             {/* SECOND VIDEO SECTION - Modern split layout with enhanced Facebook integration */}
-            <div className="bg-#FFFFFF py-10 px-4">
+            <div className="bg-white py-10 px-4">
                 <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-10">
 
                     {/* Left: Video */}
@@ -460,7 +451,7 @@ export default function Home() {
 
                     {/* Right: Profile Content */}
                     <div className="w-full md:w-1/2">
-                        <div className="bg-#FFFFFF rounded-lg shadow-md p-6 flex flex-col md:flex-row gap-6">
+                        <div className="bg-white rounded-lg shadow-md p-6 flex flex-col md:flex-row gap-6">
 
                             {/* Image and Caption bg-#FFFFFF */}
                             <div className="flex flex-col items-center md:items-start">
@@ -503,7 +494,7 @@ export default function Home() {
             </div>
 
             {/* SUPPORTERS IMPACT SECTION - Modern partnership showcase */}
-            <section id="supporters" className="bg-gradient-to-br bg-#FFFFFF py-24 px-4">
+            <section id="supporters" className="bg-gradient-to-br bg-white py-24 px-4">
                 <div className="max-w-7xl mx-auto">
 
                     {/* Partners Header */}
@@ -705,7 +696,7 @@ export default function Home() {
             </section>
 
             {/* video 03 */}
-            <div className="bg-#FFFFFF py-10 px-4">
+            <div className="bg-white py-10 px-4">
                 <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-10">
 
                     {/* Left: Video */}
@@ -763,7 +754,7 @@ export default function Home() {
                     href="https://your-donation-link.com"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-block bg-#FFFFFF text-[#1B3F92] font-bold px-10 py-4 rounded-full hover:bg-gray-200 transition"
+                    className="inline-block bg-white text-[#1B3F92] font-bold px-10 py-4 rounded-full hover:bg-gray-200 transition"
                 >
                     Donate Now
                 </a>

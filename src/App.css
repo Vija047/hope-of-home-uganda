@@ -111,13 +111,45 @@
     }
 }
 
+/* Additional animations for news component */
+@keyframes bounce-in {
+    0% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.05);
+    }
+
+    70% {
+        transform: scale(0.9);
+    }
+
+    100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        background-position: -200px 0;
+    }
+
+    100% {
+        background-position: calc(200px + 100%) 0;
+    }
+}
+
 /* Animation classes */
 .animate-fade-in {
-    animation: fade-in 0.8s ease-out;
+    animation: fade-in 0.8s ease-out forwards;
 }
 
 .animate-slide-up {
-    animation: slide-up 0.8s ease-out;
+    animation: slide-up 0.6s ease-out forwards;
 }
 
 .animate-slide-up.delay-300 {
@@ -133,7 +165,11 @@
 }
 
 .animate-scale-in {
-    animation: scale-in 0.6s ease-out;
+    animation: scale-in 0.5s ease-out forwards;
+}
+
+.animate-bounce-in {
+    animation: bounce-in 0.8s ease-out forwards;
 }
 
 .animate-float {
@@ -151,6 +187,37 @@
 
 .animate-slide-down {
     animation: slide-down 0.3s ease-out;
+}
+
+.animate-shimmer {
+    animation: shimmer 2s infinite;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.4), transparent);
+    background-size: 200px 100%;
+}
+
+/* Delay classes */
+.delay-100 {
+    animation-delay: 0.1s;
+}
+
+.delay-200 {
+    animation-delay: 0.2s;
+}
+
+.delay-300 {
+    animation-delay: 0.3s;
+}
+
+.delay-400 {
+    animation-delay: 0.4s;
+}
+
+.delay-500 {
+    animation-delay: 0.5s;
+}
+
+.delay-600 {
+    animation-delay: 0.6s;
 }
 
 /* Enhanced glassmorphism for navbar */
@@ -185,15 +252,16 @@ html {
 
 ::-webkit-scrollbar-track {
     background: #f1f1f1;
+    border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #1B3F92, #3B82F6);
+    background: #1B3F92;
     border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #16316E, #2563EB);
+    background: #16316E;
 }
 
 /* Modern button hover effects */
@@ -333,4 +401,30 @@ html {
     100% {
         content: '...';
     }
+}
+
+/* Text truncation utility */
+.line-clamp-3 {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+/* Glassmorphism effect */
+.glass-morphism {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+/* Hover effects */
+.hover-lift {
+    transition: all 0.3s ease;
+}
+
+.hover-lift:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
 }
