@@ -19,15 +19,7 @@ import donationImage from "../../assets/images/dontion-images01.png";
 import homeministrie from "../../assets/images/home-ofhope-minstrimage.gif";
 import homeofinternational from "../../assets/images/home-ofhope-interntinal.gif";
 import timothyimg from "../../assets/images/kids/timothy-imag.png";
-import Edithsimg from "../../assets/images/aboutus/Edith'simg.jpg";
-import Edithsimg2 from "../../assets/images/aboutus/Edith'simg2.jpg";
-import staf01 from "../../assets/images/aboutus/staff01jpg.jpg";
-import staf02 from "../../assets/images/aboutus/staff02.jpg"
-import staf03 from "../../assets/images/aboutus/staff03.jpg";
-import staf04 from "../../assets/images/aboutus/staff004.jpg";
-import staf05 from "../../assets/images/aboutus/staff05.jpg";
-import staf06 from "../../assets/images/aboutus/staff06.jpg";
-import ourmissionImage1 from "../../assets/images/aboutus/ourmission01.jpg";
+
 import currentproject01 from "../../assets/images/kids/cuurentimag01.jpg";
 import currentproject02 from "../../assets/images/kids/cuurentimag02.jpg";
 import currentproject03 from "../../assets/images/kids/cuurentimag03.jpg";
@@ -36,62 +28,9 @@ import HomeActivities from "./HomeActivities"; // Import the HomeActivities comp
 import Footer from '../Footer';
 import ContactUs from "../ContactUs";
 import ProgramsSection from "../ProgramsSection";
-
-// Cards for mission, vision, support
-const cards = [
-    {
-        title: "Our Mission",
-        textColor: "text-[#1B3F92]",
-        image: ourmissionImage,
-        description: `Home of Hope is a community-based, not-for-profit organization with a dedicated and compassionate team.
-
-Our mission is to enhance the health, social, and economic welfare of children with multiple mental and physical disabilities through essential care, medical treatment, mobility equipment, and education.`,
-        button: "Learn More About Our Mission",
-    },
-    {
-        title: "Our Vision",
-        textColor: "text-[#1B3F92]",
-        image: ourvisionImage,
-        description: `Poverty, hardship, and lack of social aid leave many children with disabilities abandoned.
-
-Our vision is to heal and nurture these children, fostering inclusion and helping them develop skills to live independently and with dignity.`,
-        button: "Learn More About Our Vision",
-    },
-    {
-        title: "Our Need for Support",
-        textColor: "text-[#1B3F92]",
-        image: ourneedforsupportimage,
-        description: `Home of Hope relies on generous donations and volunteers to provide a safe haven for disabled children in Uganda.
-
-Your support helps expand our facilities and provide medical care, mobility equipment, and essential support.`,
-        button: "See How You Can Help",
-    },
-];
-
-// Project campaign cards
-const projects = [
-    {
-        title: "AMAANYI CENTER",
-        image: currentproject01,
-        description:
-            "Amaanyi is the Luganda word for Power! The Amaanyi Center is the first and only Center in Uganda dedicated to empowering youth with special needs to achieve their potential. The Center provides a holistic education including life skills, self-advocacy, vocational training, therapeutic support, and more.",
-        highlight: "If you believe every child has potential donate now to this campaign.",
-    },
-    {
-        title: "#NOMOREHIDDENCHILDREN",
-        image: currentproject02,
-        description:
-            "#NoMoreHiddenChildren is a growing social movement championed by local volunteers in Uganda and abroad. Ambassadors search for children hidden away because of misunderstood disabilities. An estimated 1 million hidden children live in Uganda alone.",
-        highlight: "If you believe we should live in a world with no more hidden children donate now to support this campaign.",
-    },
-    {
-        title: "CHANCE FOR CHILDHOOD",
-        image: currentproject03,
-        description:
-            "This project enables early identification and intervention for children with special needs in even the most rural areas using mobile phone technology. We partner with Chance for Childhood to help every child play and feel accepted.",
-        highlight: "If you believe every child should have the chance to play and feel accepted donate now to support this campaign.",
-    },
-];
+import CurrentProjects from "../CurrentProjects";
+import HomeNews from "./HomeNews";
+import { cards, projects } from "./homeData";
 
 export default function Home() {
     const navigate = useNavigate();
@@ -115,7 +54,6 @@ export default function Home() {
 
     return (
         <section id="home" className="bg-gradient-to-br bg-#FFFFFF   text-center relative overflow-hidden font-sans">
-
             {/* HERO - Modern gradient background with floating elements */}
             <div className="relative min-h-screen flex items-center justify-center">
                 {/* Background hero image */}
@@ -130,7 +68,7 @@ export default function Home() {
 
                 {/* Animated background elements */}
                 <div className="absolute inset-0 overflow-hidden pointer-events-none">
-                    <div className="absolute top-20 left-10 w-32 h-32 bg-blue-200/20 rounded-full blur-xl animate-pulse"></div>
+                    <div className="absolute top-20 left-10 w-32 h-32 bg-#FFFFFF rounded-full blur-xl animate-pulse"></div>
                     <div className="absolute top-40 right-20 w-48 h-48 bg-yellow-200/20 rounded-full blur-xl animate-pulse delay-1000"></div>
                     <div className="absolute bottom-20 left-1/3 w-40 h-40 bg-pink-200/20 rounded-full blur-xl animate-pulse delay-2000"></div>
                 </div>
@@ -192,7 +130,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-
             {/* HERO IMAGE WAVE - Modern floating image with glassmorphism */}
             <div className="relative w-full -mt-20">
                 <div className="absolute inset-0 bg-gradient-to-t from-white via-transparent to-transparent h-full pointer-events-none z-10"></div>
@@ -209,9 +146,8 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-
             {/* UGANDA CONTEXT SECTION - New section with multiple images */}
-            <div className="bg-gradient-to-br from-blue-50 to-purple-50 py-20 px-4">
+            <div className="bg-gradient-to-br  bg-#FFFFFF py-20 px-4">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-5xl font-bold text-[#1B3F92] mb-4">
@@ -287,7 +223,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-
             {/* VIDEO + TEXT - Modern card layout with glassmorphism */}
             <div className="bg-gradient-to-br bg-#FFFFFF py-20 px-4">
                 <div className="max-w-7xl mx-auto">
@@ -354,8 +289,9 @@ export default function Home() {
                 </div>
             </div>
 
+
             {/* CHILDREN'S STORIES - Additional images showcase */}
-            <div className="bg-gradient-to-br from-purple-50 to-pink-50 py-20 px-4">
+            <div className=" bg-#FFFFFF py-20 px-4">
                 <div className="max-w-7xl mx-auto">
                     <div className="text-center mb-16">
                         <h2 className="text-5xl font-bold text-[#1B3F92] mb-4">
@@ -464,7 +400,6 @@ export default function Home() {
                     </div>
                 </div>
             </div>
-
             {/* SECOND VIDEO SECTION - Modern split layout with enhanced Facebook integration */}
             <div className="bg-#FFFFFF py-10 px-4">
                 <div className="max-w-7xl mx-auto flex flex-col md:flex-row items-start gap-10">
@@ -567,7 +502,7 @@ export default function Home() {
                 </div>
             </div>
 
-            {/* SUPPORTERS & IMPACT SECTION - Modern partnership showcase */}
+            {/* SUPPORTERS IMPACT SECTION - Modern partnership showcase */}
             <section id="supporters" className="bg-gradient-to-br bg-#FFFFFF py-24 px-4">
                 <div className="max-w-7xl mx-auto">
 
@@ -728,7 +663,7 @@ export default function Home() {
                                 <p className="text-gray-600 mb-6">Secure, international donations with full tax benefits</p>
                                 <button
                                     onClick={() => navigate("/donation")}
-                                    className="group w-full bg-gradient-to-r from-[#1B3F92] to-blue-600 text-white px-8 py-4 rounded-full font-bold hover:from-[#16316E] hover:to-blue-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                                    className="group w-full bg-[#1B3F92] text-white px-8 py-4 rounded-full font-bold  transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                                 >
                                     <span className="flex items-center justify-center gap-2">
                                         Donate Now
@@ -754,7 +689,7 @@ export default function Home() {
                                 <p className="text-gray-600 mb-6">Direct support to our ministry and children's programs</p>
                                 <button
                                     onClick={() => navigate("/donation")}
-                                    className="group w-full bg-gradient-to-r from-purple-600 to-pink-600 text-white px-8 py-4 rounded-full font-bold hover:from-purple-700 hover:to-pink-700 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+                                    className="group w-full bg-[#1B3F92]  text-white px-8 py-4 rounded-full font-bold  transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
                                 >
                                     <span className="flex items-center justify-center gap-2">
                                         Donate Now
@@ -799,7 +734,8 @@ export default function Home() {
                         </div>
                     </div>
                 </div>
-            </div>            {/* PROGRAMS  */}
+            </div>
+            {/* PROGRAMS  */}
             <ProgramsSection
                 ugandaEducation={ugandaEducation}
                 empowermentProjects={empowermentProjects}
@@ -809,57 +745,12 @@ export default function Home() {
 
             {/* about us */}
             <AboutUs />
+            {/* programs */}
             <HomeActivities />
-            {/* Our Need for Support */}
-            <section id="our-support" className="w-full py-16 px-4 md:px-16 bg-#FFFFFF text-center">
-                <h2 className="text-4xl font-bold text-[#1B3F92] mb-4">
-                    Our Need for Support
-                </h2>
-                <h3 className="text-2xl text-[royalblue] mb-8 font-bold">
-                    We are very much in need of your help...
-                </h3>
-                <div className="flex justify-center">
-                    <video
-                        src="/videos/Home_of_Hope_Doc3.mp4"
-                        controls
-                        className="w-full md:w-2/3 rounded-xl shadow-md"
-                    >
-                        Sorry, your browser doesn't support embedded videos.
-                    </video>
-                </div>
-            </section>
-
+            {/* new section */}
+            <HomeNews />
             {/* CURRENT PROJECTS SECTION */}
-            <section id="current-projects" className="bg-#FFFFFF py-16 px-4">
-                <h2 className="text-3xl font-bold text-[#4169e1] text-center mb-10">
-                    CURRENT PROJECTS:
-                </h2>
-                <div className="space-y-12">
-                    {projects.map((proj, i) => (
-                        <div
-                            key={i}
-                            className={`flex flex-col md:flex-row items-center bg-#FFFFFF p-6 rounded-lg shadow-lg gap-8`}
-                        >
-                            <div className="md:w-1/2 w-full flex-shrink-0">
-                                <img
-                                    src={proj.image}
-                                    alt={proj.title}
-                                    className="w-full h-64 object-cover rounded-md mb-4 md:mb-0"
-                                />
-                            </div>
-                            <div className="md:w-1/2 w-full flex flex-col justify-center">
-                                <h3 className="text-xl font-bold text-[#4169e1] mb-2">{proj.title}</h3>
-                                <p className="text-sm text-gray-700 mb-4">{proj.description}</p>
-                                <p className="text-[#4169e1] font-medium mb-4">{proj.highlight}</p>
-                                <button className="bg-transparent border border-[#4169e1] text-[#4169e1] font-bold py-2 px-6 hover:bg-[#4169e1] hover:text-white transition">
-                                    DONATE
-                                </button>
-                            </div>
-                        </div>
-                    ))}
-                </div>
-            </section>
-
+            <CurrentProjects projects={projects} />
             {/* DONATE CALLOUT */}
             <div id="donate" className="bg-[#1B3F92] text-white text-center py-20 px-8">
                 <h2 className="text-4xl md:text-5xl font-bold mb-4">
@@ -877,10 +768,8 @@ export default function Home() {
                     Donate Now
                 </a>
             </div>
-
             {/* CONTACT US - Modern contact section */}
             <ContactUs />
-
             {/* FOOTER */}
             <Footer />
         </section>
